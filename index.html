@@ -1,177 +1,320 @@
 <!doctype html>
-<html lang="uk-UA">
+<html lang="uk">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PROsche — Преміальний автосервіс в Одесі | Porsche, BMW, Mercedes, Audi</title>
-  <meta name="description" content="Преміальний автосервіс PROsche в Одесі. Глибока діагностика, ТО, підвіска, гальма, двигун, коробка, шиномонтаж. Без черг, чесно та швидко.">
-  <meta name="theme-color" content="#0f172a">
-  <meta property="og:title" content="PROsche — Преміальний автосервіс в Одесі">
-  <meta property="og:description" content="Глибока діагностика, ТО, ремонт: Porsche, BMW, Mercedes, Audi. Без черг, чесно, краще за дилера.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/og.jpg">
-  <link rel="icon" href="/favicon.ico">
+  <meta name="description" content="Преміальний автосервіс PROsche в Одесі. Глибока діагностика, ТО, підвіска, гальма, двигун, коробка, шиномонтаж. Без черг, чесно та швидко." />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="PROsche — Преміальний автосервіс в Одесі" />
+  <meta property="og:description" content="Глибока діагностика, ремонт і ТО німецьких авто. Без черг. Чесно. Швидко." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1511910849309-0dffb0925c73?q=80&w=1200&auto=format&fit=crop" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon (опціонально заміниш своїм) -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Google Tag Manager: заміни GTM-XXXXXXX на свій ID -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
   <style>
-    :root{--bg:#0b0f1a;--card:#0f172a;--muted:#94a3b8;--text:#e2e8f0;--brand:#60a5fa;--accent:#f472b6}
+    :root{--bg:#0b1020;--card:#0f172a;--muted:#94a3b8;--brand:#60a5fa;--ok:#22c55e;--accent:#f472b6;--white:#fff}
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b0f1a 0%,#0b0f1a 40%,#0a0e19 100%);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--white);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;}
     a{color:inherit;text-decoration:none}
     img{display:block;max-width:100%}
-    .container{max-width:1180px;margin:auto;padding:20px}
-    header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);background:rgba(11,15,26,.6);border-bottom:1px solid rgba(255,255,255,.06);z-index:50}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,#0e1528,#1f2a44);border:1px solid rgba(255,255,255,.12);box-shadow:0 0 0 3px rgba(255,255,255,.02) inset;display:grid;place-items:center;font-weight:800}
-    .nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;background:linear-gradient(90deg,#2563eb,#60a5fa);color:#fff;font-weight:700}
-    .btn.whatsapp{background:linear-gradient(90deg,#25D366,#128C7E)}
-    .hero{position:relative;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.06)}
-    .hero-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:60px 0}
-    @media (max-width:900px){.hero-wrap{grid-template-columns:1fr;padding:40px 0}}
-    .tag{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.25);color:#cfe3ff;font-weight:600;font-size:12px}
-    h2{font-size:42px;line-height:1.05;margin:14px 0 14px}
-    p.lead{font-size:18px;color:var(--muted);max-width:680px}
-    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:18px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
-    .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
-    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-    .badge{font-size:12px;padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03)}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    @media (max-width:900px){.grid{grid-template-columns:1fr}}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:18px}
-    .card h3{margin:0 0 8px}
-    .chip{display:inline-block;font-size:12px;padding:6px 10px;border:1px solid rgba(255,255,255,.12);border-radius:999px;color:#cbd5e1}
-    .list{margin:10px 0 0;padding:0 0 0 18px;color:#cbd5e1}
-    .section{padding:48px 0}
-    .section h2{font-size:32px;margin-bottom:12px}
-    .section p{color:var(--muted)}
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    @media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
-    .step{border:1px dashed rgba(255,255,255,.15);border-radius:18px;padding:14px}
-    .step .n{font-weight:900;font-size:22px;color:#9dd0ff}
-    .cta{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:36px;border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1)}
-    .map{border:0;width:100%;height:300px;border-radius:16px}
-    footer{border-top:1px solid rgba(255,255,255,.06);padding:24px 0;color:#94a3b8}
-    .footer-grid{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
-    @media (max-width:700px){.footer-grid{grid-template-columns:1fr}}
+    .container{width:min(1200px,92vw);margin-inline:auto}
+
+    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(8px);background:rgba(11,16,32,.65);border-bottom:1px solid rgba(255,255,255,.06)}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{display:flex;gap:10px;align-items:center;font-weight:700;letter-spacing:.5px}
+    .logo-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#111827,#1f2937 60%,#60a5fa);display:grid;place-items:center;font-size:14px}
+    .logo-badge span{font-weight:800}
+    .actions{display:flex;gap:10px;align-items:center}
+    .btn{padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.15);transition:.2s;display:inline-flex;align-items:center;gap:8px}
+    .btn:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.3)}
+    .btn-primary{background:linear-gradient(135deg,#2563eb,#60a5fa);border:none}
+    .btn-outline{background:rgba(255,255,255,.04)}
+
+    .hero{position:relative;isolation:isolate}
+    .hero-img{position:absolute;inset:0;z-index:-1}
+    .hero-img::before{content:"";position:absolute;inset:0;background:radial-gradient(1200px 500px at 70% 10%, rgba(96,165,250,.35), transparent 55%), radial-gradient(900px 400px at 20% 20%, rgba(244,114,182,.35), transparent 55%)}
+    .hero-img img{width:100%;height:520px;object-fit:cover;filter:contrast(1.1) saturate(1.1) brightness(.85)}
+    .hero .container{padding:92px 0 64px}
+    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.1;margin:0 0 14px}
+    .hero p{color:var(--muted);font-size:clamp(14px,2.2vw,18px);max-width:740px}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}
+    .badge{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);font-size:12px;color:#dbeafe}
+
+    .grid{display:grid;gap:18px}
+    .two{grid-template-columns:repeat(2,1fr)}
+    .three{grid-template-columns:repeat(3,1fr)}
+    @media (max-width:900px){.two,.three{grid-template-columns:1fr}}
+
+    section{padding:40px 0;border-top:1px solid rgba(255,255,255,.06)}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden}
+    .card h3{margin:0 0 6px}
+    .card p{margin:0;color:var(--muted)}
+    .card .body{padding:16px}
+    .thumb{aspect-ratio:16/10;width:100%;object-fit:cover}
+    .list{display:grid;gap:10px;margin:10px 0 0;padding:0}
+    .list li{list-style:none;display:flex;gap:10px;align-items:flex-start}
+    .dot{width:8px;height:8px;background:var(--brand);border-radius:999px;margin-top:.6em}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .muted{color:var(--muted)}
+    .footer{padding:30px 0 60px;color:#cbd5e1}
+    .chip{font-size:12px;color:#e2e8f0;background:rgba(148,163,184,.15);border:1px solid rgba(148,163,184,.25);padding:6px 10px;border-radius:999px}
+    .legal{font-size:12px;color:#94a3b8}
+
+    .menu{position:relative}
+    .dropdown{position:absolute;right:0;top:120%;background:#0f172a;border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:10px;display:none;min-width:280px}
+    .menu[open] .dropdown{display:block}
+    .dropdown a{display:block;padding:8px 10px;border-radius:10px;color:#e2e8f0}
+    .dropdown a:hover{background:rgba(255,255,255,.06)}
+
+    form{display:grid;gap:10px}
+    input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.04);color:#fff}
+    input::placeholder,textarea::placeholder{color:#94a3b8}
+    .success{display:none;margin-top:8px;font-size:14px;color:#86efac}
   </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <header>
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="PROsche">
-        <div class="logo">PR</div>
-        <h1>PROsche</h1>
-      </a>
+    <div class="container">
       <nav>
-        <ul>
-          <li><a href="#services">Послуги</a></li>
-          <li><a href="#catalog">Галерея</a></li>
-          <li><a href="#benefits">Чому ми</a></li>
-          <li><a href="#contacts">Контакти</a></li>
-        </ul>
+        <div class="logo">
+          <div class="logo-badge"><span>PR</span></div>
+          <div>
+            <div>PROsche</div>
+            <div class="muted" style="font-size:12px">Преміальний автосервіс — Одеса</div>
+          </div>
+        </div>
+        <details class="menu">
+          <summary class="btn btn-outline" role="button">Послуги</summary>
+          <div class="dropdown">
+            <a href="#services">Діагностика та ТО</a>
+            <a href="#suspension">Підвіска і гальма</a>
+            <a href="#transmission">Двигун і трансмісія</a>
+            <a href="#tires">Шини і сезонна заміна</a>
+            <a href="#audio">Преміальна акустика</a>
+          </div>
+        </details>
+        <div class="actions">
+          <a data-track="instagram_click" class="btn btn-outline" href="https://instagram.com/prosche.service" target="_blank" rel="noopener">Instagram</a>
+          <a id="waHeader" data-track="whatsapp_click" class="btn btn-primary" href="https://wa.me/380674837410?text=Вітаю! Хочу записатися на сервіс PROsche" target="_blank" rel="noopener">Написати в WhatsApp</a>
+        </div>
       </nav>
-      <a class="btn whatsapp" href="https://wa.me/380674837410?text=Привіт!%20Хочу%20записатись%20на%20діагностику" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </header>
 
-  <main id="top" class="hero">
-    <div class="container hero-wrap">
+  <section class="hero">
+    <div class="hero-img">
+      <!-- Головне фото авто (можна замінити своїм) -->
+      <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?q=80&w=2000&auto=format&fit=crop" alt="Porsche на сервісі PROsche в Одесі" />
+    </div>
+    <div class="container">
+      <span class="chip">Одеса, вул. Бугаївська 54/1</span>
+      <h1>Глибока діагностика та сервіс для Porsche, BMW, Mercedes, Audi</h1>
+      <p>Шукаємо причину, а не маскуємо наслідки. Працюємо швидко, без черг і з повагою до вашого часу: чисті посадочні місця, захист керма та сидінь, прозора історія ремонту.</p>
+      <div class="badges">
+        <span class="badge">Компʼютерна + механічна діагностика</span>
+        <span class="badge">Оригінальні та перевірені запчастини</span>
+        <span class="badge">Гарантія на роботи</span>
+      </div>
+      <div class="cta">
+        <a id="ctaHero" class="btn btn-primary" href="#lead">Записатися</a>
+        <a id="ctaGallery" class="btn btn-outline" href="#gallery">Подивитися авто в роботі</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="container">
+    <h2 style="margin:0 0 12px">Наші роботи</h2>
+    <p class="muted">Реальні фото авто та атмосфери сервісу. Ми дбаємо про чистоту, світло і деталі.</p>
+    <div class="grid three" style="margin-top:16px">
+      <figure class="card">
+        <img class="thumb" src="https://images.unsplash.com/photo-1517940310602-1152c2300992?q=80&w=1600&auto=format&fit=crop" alt="Porsche 911 на підйомнику" />
+        <figcaption class="body"><h3>Porsche 911</h3><p>ТО + гальмівна система</p></figcaption>
+      </figure>
+      <figure class="card">
+        <img class="thumb" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" alt="BMW в боксі" />
+        <figcaption class="body"><h3>BMW</h3><p>Діагностика підвіски</p></figcaption>
+      </figure>
+      <figure class="card">
+        <img class="thumb" src="https://images.unsplash.com/photo-1619767886558-efdc259cde1d?q=80&w=1600&auto=format&fit=crop" alt="Mercedes в процесі ремонту" />
+        <figcaption class="body"><h3>Mercedes</h3><p>Електроніка та адаптації</p></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="services" class="container">
+    <h2 style="margin:0 0 12px">Основні послуги</h2>
+    <div class="grid two" style="margin-top:16px">
+      <div class="card">
+        <img class="thumb" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop" alt="Діагностика авто PROsche" />
+        <div class="body">
+          <h3>Діагностика та планове ТО</h3>
+          <ul class="list">
+            <li><span class="dot"></span><span>Компʼютерна, механічна, візуальна діагностика</span></li>
+            <li><span class="dot"></span><span>Заміна оливи та всіх фільтрів</span></li>
+            <li><span class="dot"></span><span>Свічки, рідини, адаптації</span></li>
+          </ul>
+        </div>
+      </div>
+      <div id="suspension" class="card">
+        <img class="thumb" src="https://images.unsplash.com/photo-1603386329225-868f9c65d8f5?q=80&w=1600&auto=format&fit=crop" alt="Авто та гальмівна система" />
+        <div class="body">
+          <h3>Підвіска і гальма</h3>
+          <ul class="list">
+            <li><span class="dot"></span><span>Амортизатори, важелі, шарові опори</span></li>
+            <li><span class="dot"></span><span>Колодки, диски, гальмівна рідина</span></li>
+            <li><span class="dot"></span><span>Розвал-сходження</span></li>
+          </ul>
+        </div>
+      </div>
+      <div id="transmission" class="card">
+        <img class="thumb" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop" alt="Двигун та трансмісія" />
+        <div class="body">
+          <h3>Двигун і трансмісія</h3>
+          <ul class="list">
+            <li><span class="dot"></span><span>Капремонт, ланцюги/ГРМ, помпи</span></li>
+            <li><span class="dot"></span><span>МКПП, АКПП, DSG, варіатор</span></li>
+            <li><span class="dot"></span><span>Адаптації, прошивки</span></li>
+          </ul>
+        </div>
+      </div>
+      <div id="tires" class="card">
+        <img class="thumb" src="https://images.unsplash.com/photo-1629138544418-1a40add35252?q=80&w=1600&auto=format&fit=crop" alt="Авто з колесами — сезонна заміна" />
+        <div class="body">
+          <h3>Шини та сезонна заміна</h3>
+          <ul class="list">
+            <li><span class="dot"></span><span>Заміна та балансування шин</span></li>
+            <li><span class="dot"></span><span>Сезонна переобувка, перевірка тиску</span></li>
+            <li><span class="dot"></span><span>TPMS діагностика</span></li>
+          </ul>
+        </div>
+      </div>
+      <div id="audio" class="card" style="grid-column:1/-1">
+        <img class="thumb" src="https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=1600&auto=format&fit=crop" alt="Преміальна акустика Bose" />
+        <div class="body">
+          <h3>Преміальна акустика</h3>
+          <p>Інсталяція Bose/Hi‑Fi, шумоізоляція, тюнінг аудіосистем з гарантією.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="lead">
+    <div class="grid two">
+      <div class="card">
+        <div class="body">
+          <h3>Записатися онлайн</h3>
+          <p class="muted">Залиште імʼя та телефон — ми звʼяжемося у WhatsApp або телефоном.</p>
+          <form id="leadForm">
+            <input type="text" id="name" name="name" placeholder="Ваше імʼя" required />
+            <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required />
+            <textarea id="note" name="note" rows="3" placeholder="Коротко про авто / послугу (необовʼязково)"></textarea>
+            <button class="btn btn-primary" type="submit">Надіслати</button>
+            <div id="ok" class="success">Дякуємо! Відкриваємо WhatsApp…</div>
+          </form>
+          <p class="legal" style="margin-top:10px">Натискаючи «Надіслати», ви погоджуєтеся на обробку контактних даних для зворотного звʼязку.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="body">
+          <h3>Контакти</h3>
+          <ul class="list">
+            <li><span class="dot"></span><span><strong>Адреса:</strong> Одеса, вул. Бугаївська 54/1</span></li>
+            <li><span class="dot"></span><span><strong>WhatsApp:</strong> <a data-track="whatsapp_click" href="https://wa.me/380674837410" target="_blank" rel="noopener">+380 67 483 7410</a></span></li>
+            <li><span class="dot"></span><span><strong>Instagram:</strong> <a data-track="instagram_click" href="https://instagram.com/prosche.service" target="_blank" rel="noopener">prosche.service</a></span></li>
+          </ul>
+          <div style="margin-top:12px; border-radius:12px; overflow:hidden">
+            <!-- Статична карта (можна замінити iframe Google Maps) -->
+            <img src="https://api.mapbox.com/styles/v1/mapbox/dark-v11/static/30.698,46.441,12,0/800x400?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.DuS8x7Z5N9X0w9g7O2x2DQ" alt="Карта розташування PROsche" style="width:100%;aspect-ratio:2/1;object-fit:cover" />
+          </div>
+          <p class="muted" style="margin-top:8px">Парковка поруч. Запис за попереднім дзвінком/повідомленням.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container footer">
+    <div class="grid two">
       <div>
-        <span class="tag">Преміальний автосервіс в Одесі</span>
-        <h2>Глибока діагностика. Чесний сервіс. <span style="background:linear-gradient(90deg,#2563eb,#60a5fa);-webkit-background-clip:text;background-clip:text;color:transparent">Краще за дилера</span>.</h2>
-        <p class="lead">Porsche • BMW • Mercedes • Audi. Без черг — зазвичай того ж дня. Офіційні стандарти, прозора комунікація, відповідальність за результат.</p>
-        <div class="hero-cta">
-          <a class="btn" href="#contacts">Записатися</a>
-          <a class="btn whatsapp" href="https://wa.me/380674837410?text=Привіт!%20Підкажіть%20вартість%20ТО" target="_blank" rel="noopener">Написати в WhatsApp</a>
+        <div class="logo" style="margin-bottom:8px">
+          <div class="logo-badge"><span>PR</span></div>
+          <strong>PROsche</strong>
         </div>
-        <div class="badges">
-          <span class="badge">Гарантія на роботи</span>
-          <span class="badge">Оригінальні запчастини</span>
-          <span class="badge">Безплатна діагностика при ремонті</span>
-        </div>
+        <div class="muted">Сервіс вище, ніж у дилерів. Чесно. Чисто. Професійно.</div>
       </div>
-      <div class="hero-card">
-        <img src="assets/hero.jpg" alt="Автомобіль на сервісі">
+      <div style="text-align:right">
+        <a data-track="instagram_click" class="btn btn-outline" href="https://instagram.com/prosche.service" target="_blank" rel="noopener">Instagram</a>
+        <a id="waFooter" data-track="whatsapp_click" class="btn btn-primary" href="https://wa.me/380674837410?text=Вітаю! Хочу записатися на сервіс PROsche" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
-  </main>
-
-  <section id="services" class="section container">
-    <h2>Послуги</h2>
-    <p>Повний цикл робіт для сучасних авто. Акуратність, захисні чохли, контроль якості.</p>
-    <div class="grid" style="margin-top:14px">
-      <div class="card"><h3>ТО та витратні</h3><p>Моторне масло, фільтри, свічки, ремені, рідини.</p></div>
-      <div class="card"><h3>Гальмівна система</h3><p>Колодки, диски, супорти, гальмівна рідина.</p></div>
-      <div class="card"><h3>Підвіска</h3><p>Амортизатори, важелі, шарові, сайлентблоки.</p></div>
-      <div class="card"><h3>Двигун</h3><p>Капремонт, модульний ремонт, герметичність.</p></div>
-      <div class="card"><h3>Трансмісія</h3><p>АКПП/DSG/МКПП — ремонт, прошивка, адаптація.</p></div>
-      <div class="card"><h3>Колеса</h3><p>Шини, сезонна «перевзувка», балансування, розвал.</p></div>
-    </div>
+    <div class="muted" style="margin-top:14px">© <span id="y"></span> PROsche. Всі права захищені.</div>
   </section>
 
-  <section id="catalog" class="section" style="background:rgba(255,255,255,.02)">
-    <div class="container">
-      <h2>Галерея</h2>
-      <div class="grid" style="margin-top:12px">
-        <div class="card"><img src="assets/g1.jpg" alt="Porsche в робочій зоні"></div>
-        <div class="card"><img src="assets/g2.jpg" alt="BMW на підйомнику"></div>
-        <div class="card"><img src="assets/g3.jpg" alt="Mercedes — деталі ремонту"></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="benefits" class="section">
-    <div class="container">
-      <h2>Чому обирають PROsche</h2>
-      <div class="steps" style="margin-top:12px">
-        <div class="step"><div class="n">01</div><strong>Без черг</strong><br><span class="muted">Плануємо візит так, щоб ви не чекали.</span></div>
-        <div class="step"><div class="n">02</div><strong>Чесний підхід</strong><br><span class="muted">Фото/відео звіт, погодження кошторису до старту.</span></div>
-        <div class="step"><div class="n">03</div><strong>Глибока діагностика</strong><br><span class="muted">Знаходимо причину, а не маскуємо симптоми.</span></div>
-        <div class="step"><div class="n">04</div><strong>Сервіс «вище дилера»</strong><br><span class="muted">Якість та увага до деталей без переплат.</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contacts" class="section container">
-    <h2>Контакти</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Адреса</h3>
-        <p>Одеса, вул. Бугаївська 54/1</p>
-        <p><strong>Графік:</strong> Пн–Сб 09:00–19:00</p>
-        <p><strong>Телефон:</strong> <a href="tel:+380674837410">+38 (067) 483 74 10</a></p>
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/380674837410" target="_blank" rel="noopener">написати</a></p>
-        <p><strong>Instagram:</strong> <a href="https://instagram.com/prosche.service" target="_blank" rel="noopener">@prosche.service</a></p>
-        <div class="hero-cta">
-          <a class="btn" href="tel:+380674837410">Подзвонити</a>
-          <a class="btn whatsapp" href="https://wa.me/380674837410?text=Привіт!%20Хочу%20записатись%20на%20обслуговування" target="_blank" rel="noopener">WhatsApp запис</a>
-        </div>
-      </div>
-      <div class="card">
-        <h3>Локація на карті</h3>
-        <iframe class="map" loading="lazy" allowfullscreen src="https://www.google.com/maps?q=Одеса%20Бугаївська%2054/1&output=embed"></iframe>
-      </div>
-      <div class="card">
-        <h3>Ключові послуги</h3>
-        <ul class="list">
-          <li>Діагностика автомобіля (комп'ютерна, механічна, візуальна)</li>
-          <li>Підвіска, гальма, двигун, коробка передач</li>
-          <li>Шини, балансування, розвал‑сходження</li>
-        </ul>
-        <img src="assets/s1.jpg" alt="Діагностика авто" style="margin-top:10px;border-radius:12px">
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container footer-grid">
-      <div>© <span id="year"></span> PROsche. Всі права захищено.</div>
-      <div>Instagram: <a href="https://instagram.com/prosche.service" target="_blank" rel="noopener" aria-label="Instagram PROsche">@prosche.service</a></div>
-    </div>
-  </footer>
+  <!-- Schema.org (LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "PROsche",
+    "image": "https://images.unsplash.com/photo-1511910849309-0dffb0925c73?q=80&w=1200&auto=format&fit=crop",
+    "address": {"@type":"PostalAddress","addressLocality":"Одеса","streetAddress":"вул. Бугаївська 54/1","addressCountry":"UA"},
+    "url": "https://prosche.services",
+    "telephone": "+380674837410",
+    "priceRange": "$$$",
+    "areaServed": "Одеса"
+  }
+  </script>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Поточний рік у футері
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Відправка у WhatsApp замість «імітації»
+    const form = document.getElementById('leadForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const note = document.getElementById('note').value.trim();
+      const msg = encodeURIComponent(`Привіт! Хочу записатися в PROsche.\nІм'я: ${name}\nТелефон: ${phone}${note?`\nКоментар: ${note}`:''}`);
+      const wa = `https://wa.me/380674837410?text=${msg}`;
+      document.getElementById('ok').style.display='block';
+      window.open(wa, '_blank');
+      pushEvent('whatsapp_click', {source:'form'});
+      pushEvent('form_submit', {phone_present: !!phone});
+    });
+
+    // GTM-friendly events
+    function pushEvent(name, params={}){
+      try{ window.dataLayer = window.dataLayer || []; dataLayer.push({event:name, ...params}); }catch(e){}
+    }
+
+    // Track link clicks
+    document.addEventListener('click', (e)=>{
+      const a = e.target.closest('a[data-track]');
+      if(!a) return;
+      const type = a.getAttribute('data-track');
+      pushEvent(type, {link: a.href, location: a.id || 'unknown'});
+    });
+
+    // Track hero CTAs
+    ['ctaHero','ctaGallery'].forEach(id=>{
+      const el = document.getElementById(id); if(!el) return;
+      el.addEventListener('click',()=> pushEvent('cta_click', {id}));
+    });
   </script>
 </body>
 </html>
