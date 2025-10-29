@@ -1,1 +1,304 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PROsche — Перелік робіт та контакти</title>
+    <meta name="description" content="Перелік робіт PROsche та контакти: адреса, карта, форма зворотного звʼязку." />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="icon" href="/favicon.ico" />
+    <style>
+      :root {
+        --bg: #0b0f1a;
+        --card: #0f172a;
+        --card-highlight: rgba(255, 255, 255, 0.04);
+        --muted: #94a3b8;
+        --text: #e2e8f0;
+        --brand: #f43f5e;
+        --brand-2: #60a5fa;
+        --ok: #22c55e;
+        --warn: #f59e0b;
+      }
+
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0; padding: 0;
+        background: linear-gradient(180deg, #0b0f1a, #0b0f1a 40%, #0a0e19 100%);
+        color: var(--text);
+        font-family: Inter, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+      }
+      a { color: inherit; text-decoration: none; }
+      a:hover, a:focus-visible { color: #fff; }
+      img { display: block; max-width: 100%; }
+      .container { max-width: 1180px; margin: 0 auto; padding: 20px; }
+
+      .btn {
+        display: inline-flex; align-items: center; gap: 10px;
+        padding: 12px 18px; border-radius: 14px; border: 0; cursor: pointer;
+        background: linear-gradient(90deg, var(--brand), var(--brand-2)); color: #fff; font-weight: 700;
+        box-shadow: 0 10px 30px rgba(96, 165, 250, 0.2);
+      }
+      .btn.whatsapp { background: linear-gradient(90deg, #25d366, #128c7e); }
+
+      .section { padding: 64px 0; }
+      .section h2 { font-size: 32px; margin-bottom: 12px; }
+      .section p { color: var(--muted); }
+
+      .accordion { display: grid; gap: 10px; }
+      details {
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 14px; padding: 12px;
+        background: rgba(255, 255, 255, 0.03);
+      }
+      summary { cursor: pointer; font-weight: 700; list-style: none; }
+      summary::-webkit-details-marker { display: none; }
+      .acc-list { margin: 10px 0 0; padding-left: 18px; color: #cbd5e1; }
+
+      .cta {
+        display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;
+        padding: 36px; border-radius: 24px;
+        background:
+          radial-gradient(80% 120% at 0% 0%, rgba(244, 63, 94, 0.12), transparent 60%),
+          radial-gradient(90% 120% at 100% 100%, rgba(96, 165, 250, 0.12), transparent 60%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+
+      .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+      .card {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+        border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 18px;
+      }
+      .card h3 { margin: 0 0 10px; font-size: 18px; }
+      .card p { margin: 0; color: #cbd5e1; line-height: 1.5; }
+
+      .map { border: 0; width: 100%; height: 300px; border-radius: 16px; filter: saturate(110%) contrast(105%); }
+
+      form { display: flex; flex-direction: column; gap: 12px; margin-top: 14px; }
+      input[type="text"], input[type="tel"] {
+        padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2);
+        background: rgba(255,255,255,0.05); color: #e2e8f0;
+      }
+      label { font-size: 14px; color: var(--muted); }
+      .consent { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: #cbd5e1; }
+
+      @media (max-width: 900px) {
+        .grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Перелік робіт -->
+    <section id="catalog" class="section" style="background: rgba(255, 255, 255, 0.02)">
+      <div class="container">
+        <span class="tag">Все прозоро</span>
+        <h2>Перелік робіт</h2>
+        <p>Зробили компактним і зручним: розділи розкриваються. Прибрали зайві/рідкісні позиції, залишили популярне й зрозуміле.</p>
+        <div class="accordion" style="margin-top: 12px">
+          <details>
+            <summary>Діагностика</summary>
+            <ul class="acc-list">
+              <li>Компʼютерна діагностика (читання помилок, live-дані)</li>
+              <li>Механічна перевірка вузлів (підвіска, гальма, витоки)</li>
+              <li>Тест-драйв та первинний висновок з кошторисом</li>
+            </ul>
+          </details>
+          <details>
+            <summary>Планове ТО</summary>
+            <ul class="acc-list">
+              <li>Заміна моторної оливи та фільтра</li>
+              <li>Заміна повітряного, салонного, паливного фільтрів</li>
+              <li>Свічки запалювання / накалу</li>
+              <li>Гальмівна рідина (раз на 2 роки)</li>
+              <li>Адаптація/прописка АКБ</li>
+            </ul>
+          </details>
+          <details>
+            <summary>Гальмівна система</summary>
+            <ul class="acc-list">
+              <li>Колодки та диски (заміна/обслуговування супортів)</li>
+              <li>Ручне гальмо (механічне/електронне) — регулювання</li>
+              <li>Антискрипові рішення, очищення напрямних</li>
+            </ul>
+          </details>
+          <details>
+            <summary>Підвіска</summary>
+            <ul class="acc-list">
+              <li>Амортизатори, пружини, опори</li>
+              <li>Важелі, шарові, сайлентблоки</li>
+              <li>Сход-розвал (налаштування під стиль їзди)</li>
+            </ul>
+          </details>
+          <details>
+            <summary>Двигун</summary>
+            <ul class="acc-list">
+              <li>Ремінь ГРМ/ланцюг (ролики, помпа)</li>
+              <li>Ущільнення (кришка клапанів, піддон, сальники)</li>
+              <li>Охолодження (радіатор, термостат, патрубки)</li>
+            </ul>
+          </details>
+          <details>
+            <summary>Трансмісія</summary>
+            <ul class="acc-list">
+              <li>АКПП/DSG/МКПП — обслуговування та ремонт</li>
+              <li>Заміна мастила, фільтрів, адаптації</li>
+              <li>Діагностика гідроблоку/зчеплень</li>
+            </ul>
+          </details>
+          <details>
+            <summary>Колеса та геометрія</summary>
+            <ul class="acc-list">
+              <li>Шини (демонтаж/монтаж, балансування)</li>
+              <li>Сезонна «перевзувка»</li>
+              <li>Розвал-сходження</li>
+            </ul>
+          </details>
+          <details>
+            <summary>Електрика та АКБ</summary>
+            <ul class="acc-list">
+              <li>Перевірка заряду та споживання</li>
+              <li>Прописка нової АКБ</li>
+              <li>Ремонт проводки локально (без глобальних переділок)</li>
+            </ul>
+          </details>
+        </div>
+        <div class="cta" style="margin-top: 16px">
+          <p style="margin: 0">Потрібно щось нестандартне? Напишіть у WhatsApp — підкажемо, чи беремось, і скільки це коштує.</p>
+          <div class="hero-cta">
+            <a class="btn whatsapp" href="https://wa.me/380674837410?text=Привіт!%20Потрібна%20консультація%20щодо%20робіт" target="_blank" rel="noopener">Запит у WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакти з картою та формою -->
+    <section id="contacts" class="section">
+      <div class="container">
+        <span class="tag">Звʼяжіться з нами</span>
+        <h2>Контакти</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Адреса</h3>
+            <p>Одеса, вул. Бугаївська 54/1</p>
+            <p><strong>Графік:</strong> Пн–Сб 09:00–19:00</p>
+            <p><strong>Телефон:</strong> <a href="tel:+380674837410">+38 (067) 483 74 10</a></p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/380674837410" target="_blank" rel="noopener">написати</a></p>
+            <p><strong>Instagram:</strong> <a href="https://instagram.com/prosche.service" target="_blank" rel="noopener">@prosche.service</a></p>
+            <div class="hero-cta">
+              <a class="btn" href="tel:+380674837410">Подзвонити</a>
+              <a class="btn whatsapp" href="https://wa.me/380674837410?text=Привіт!%20Хочу%20записатись%20на%20обслуговування" target="_blank" rel="noopener">WhatsApp запис</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Локація на карті</h3>
+            <iframe
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.8821905528966!2d30.693723676163383!3d46.47084147110821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c633984e9fbf8d%3A0x2978c021b534fe17!2sProsche%20Service!5e0!3m2!1sru!2sid!4v1759253598189!5m2!1sru!2sid"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <div class="card">
+            <h3>Заявка на зворотний звʼязок</h3>
+            <form id="contact-form">
+              <div>
+                <label for="name">Ваше імʼя</label>
+                <input id="name" name="name" type="text" placeholder="Імʼя" required />
+              </div>
+              <div>
+                <label for="phone">Телефон</label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="+380…" required />
+              </div>
+              <label class="consent">
+                <input type="checkbox" id="consent" required />
+                <span>Даю згоду на обробку персональних даних для зворотного звʼязку та організації послуги.</span>
+              </label>
+              <button class="btn" type="submit">Надіслати заявку</button>
+              <p id="form-status" style="margin: 6px 0 0; color: var(--muted)"></p>
+            </form>
+          </div>
+        </div>
+        <div class="cta" style="margin-top: 20px">
+          <h3 style="margin: 0">Готові подбати про ваше авто</h3>
+          <p style="margin: 0; color: var(--muted)">Залишайте заявку у WhatsApp або форму — підберемо зручний час вже сьогодні.</p>
+          <div class="hero-cta">
+            <a class="btn whatsapp" href="https://wa.me/380674837410?text=Привіт!%20Потрібне%20ТО%20/%20діагностика" target="_blank" rel="noopener">Запис у WhatsApp</a>
+            <a class="btn" href="tel:+380674837410">Подзвонити зараз</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // === НАЛАШТУВАННЯ ДЛЯ ВІДПРАВКИ ЛІДІВ ===
+      const TG_BOT_TOKEN = "7840982876:AAEloVOcS_ftk6MF1RnCBFYfBcmqrWIMgVk";
+      const TG_CHAT_ID = -4851593053; // група, куди вже летять ліди
+      const WA_PHONE = "380674837410";
+
+      function buildLeadMessage({ name, phone, consent }) {
+        const when = new Date().toLocaleString('uk-UA');
+        const url = location.href;
+        return (
+          `Нова заявка з сайту PROsche\n` +
+          `Ім'я: ${name}\n` +
+          `Телефон: ${phone}\n` +
+          `Згода на обробку: ${consent ? 'так' : 'ні'}\n` +
+          `Сторінка: ${url}\n` +
+          `Час: ${when}`
+        );
+      }
+
+      async function sendToTelegram(text) {
+        const endpoint = `https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage`;
+        const payload = { chat_id: TG_CHAT_ID, text };
+        const res = await fetch(endpoint, {
+          method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)
+        });
+        return res.ok;
+      }
+
+      function openWhatsApp(text) {
+        const waUrl = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(text)}`;
+        window.open(waUrl, '_blank', 'noopener');
+      }
+
+      function looksLikePhone(v) { return /^\+?\d[\d\s\-()]{7,}$/.test(v); }
+
+      const form = document.getElementById('contact-form');
+      const statusEl = document.getElementById('form-status');
+
+      form?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const consent = document.getElementById('consent').checked;
+
+        if (!name || !phone || !consent) {
+          statusEl.textContent = 'Заповніть поля та дайте згоду.';
+          return;
+        }
+        if (!looksLikePhone(phone)) {
+          statusEl.textContent = 'Перевірте формат телефону (приклад: +380 67 483 74 10).';
+          return;
+        }
+
+        const msg = buildLeadMessage({ name, phone, consent });
+        statusEl.textContent = 'Надсилаємо...';
+        try {
+          const ok = await sendToTelegram(msg);
+          statusEl.textContent = ok ? 'Заявку надіслано! Ми скоро звʼяжемося.' : 'Не вийшло надіслати у Telegram. Спробуйте ще раз або напишіть у WhatsApp.';
+        } catch {
+          statusEl.textContent = 'Помилка мережі при надсиланні у Telegram.';
+        }
+        openWhatsApp(msg);
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
+
 
