@@ -1,94 +1,121 @@
+
+
 <!doctype html>
 <html lang="uk">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>PROsche — Перелік робіт та контакти</title>
-    <meta name="description" content="Перелік робіт PROsche та контакти: адреса, карта, форма зворотного звʼязку." />
+    <title>PROsche — Перелік робіт, контакти та запис</title>
+    <meta name="description" content="Перелік робіт PROsche, контакти, карта та форма зворотного звʼязку. Преміальний сервіс Porsche, Mercedes, Audi, BMW в Одесі." />
     <meta name="theme-color" content="#0f172a" />
     <link rel="icon" href="/favicon.ico" />
     <style>
-      :root {
-        --bg: #0b0f1a;
-        --card: #0f172a;
-        --card-highlight: rgba(255, 255, 255, 0.04);
-        --muted: #94a3b8;
-        --text: #e2e8f0;
-        --brand: #f43f5e;
-        --brand-2: #60a5fa;
-        --ok: #22c55e;
-        --warn: #f59e0b;
-      }
+      :root { --bg:#0b0f1a; --card:#0f172a; --muted:#94a3b8; --text:#e2e8f0; --brand:#f43f5e; --brand-2:#60a5fa; }
+      *{box-sizing:border-box}
+      html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b0f1a,#0b0f1a 40%,#0a0e19 100%);color:var(--text);font-family:Inter,system-ui,"Segoe UI",Roboto,Arial,sans-serif}
+      a{color:inherit;text-decoration:none}
+      a:hover,a:focus-visible{color:#fff}
+      .container{max-width:1180px;margin:0 auto;padding:20px}
 
-      * { box-sizing: border-box; }
-      html, body {
-        margin: 0; padding: 0;
-        background: linear-gradient(180deg, #0b0f1a, #0b0f1a 40%, #0a0e19 100%);
-        color: var(--text);
-        font-family: Inter, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
-      }
-      a { color: inherit; text-decoration: none; }
-      a:hover, a:focus-visible { color: #fff; }
-      img { display: block; max-width: 100%; }
-      .container { max-width: 1180px; margin: 0 auto; padding: 20px; }
+      /* Header */
+      header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(8px);background:rgba(11,15,26,.6);border-bottom:1px solid rgba(255,255,255,.06)}
+      .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+      .brand{display:flex;align-items:center;gap:12px}
+      .logo{width:36px;height:36px;border-radius:12px;background:radial-gradient(circle at 30% 30%,var(--brand),transparent 60%),radial-gradient(circle at 70% 70%,var(--brand-2),transparent 60%),#0b1220;border:1px solid rgba(255,255,255,.12);box-shadow:0 0 0 3px rgba(255,255,255,.02) inset}
+      .brand h1{font-size:18px;margin:0;font-weight:800;letter-spacing:.4px}
+      .nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+      .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;border:0;cursor:pointer;background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;font-weight:700;box-shadow:0 10px 30px rgba(96,165,250,.2)}
+      .btn.whatsapp{background:linear-gradient(90deg,#25d366,#128c7e)}
 
-      .btn {
-        display: inline-flex; align-items: center; gap: 10px;
-        padding: 12px 18px; border-radius: 14px; border: 0; cursor: pointer;
-        background: linear-gradient(90deg, var(--brand), var(--brand-2)); color: #fff; font-weight: 700;
-        box-shadow: 0 10px 30px rgba(96, 165, 250, 0.2);
-      }
-      .btn.whatsapp { background: linear-gradient(90deg, #25d366, #128c7e); }
+      /* Hero */
+      .hero{border-bottom:1px solid rgba(255,255,255,.06)}
+      .hero-wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:28px;align-items:center;padding:42px 0}
+      .tag{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.25);color:#cfe3ff;font-weight:600;font-size:12px;letter-spacing:.6px;text-transform:uppercase}
+      h2{font-size:42px;line-height:1.05;margin:14px 0}
+      p.lead{font-size:18px;color:var(--muted);max-width:680px}
+      .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
+      .hero-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+      .hero-photo{position:relative;overflow:hidden;border-radius:24px;background:rgba(15,23,42,.7);border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 80px rgba(2,6,23,.45);min-height:260px;aspect-ratio:4/5}
+      .hero-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(1.05);transition:transform .6s ease}
+      .hero-photo:hover img{transform:scale(1.03)}
+      .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,23,42,0) 45%,rgba(15,23,42,.78) 100%);pointer-events:none}
+      .hero-photo figcaption{position:absolute;left:16px;bottom:16px;padding:12px 16px;border-radius:14px;background:rgba(15,23,42,.85);backdrop-filter:blur(14px);font-size:13px;line-height:1.45;max-width:240px;color:var(--text);box-shadow:0 20px 45px rgba(2,6,23,.45)}
 
-      .section { padding: 64px 0; }
-      .section h2 { font-size: 32px; margin-bottom: 12px; }
-      .section p { color: var(--muted); }
+      /* Sections */
+      .section{padding:64px 0}
+      .section h2{font-size:32px;margin-bottom:12px}
+      .section p{color:var(--muted)}
+      .accordion{display:grid;gap:10px}
+      details{border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:12px;background:rgba(255,255,255,.03)}
+      summary{cursor:pointer;font-weight:700;list-style:none}
+      summary::-webkit-details-marker{display:none}
+      .acc-list{margin:10px 0 0;padding-left:18px;color:#cbd5e1}
+      .cta{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:36px;border-radius:24px;background:radial-gradient(80% 120% at 0% 0%,rgba(244,63,94,.12),transparent 60%),radial-gradient(90% 120% at 100% 100%,rgba(96,165,250,.12),transparent 60%),linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1)}
+      .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+      .card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:18px}
+      .card h3{margin:0 0 10px;font-size:18px}
+      .card p{margin:0;color:#cbd5e1;line-height:1.5}
+      .map{border:0;width:100%;height:300px;border-radius:16px;filter:saturate(110%) contrast(105%)}
+      form{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+      input[type="text"],input[type="tel"]{padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.05);color:#e2e8f0}
+      label{font-size:14px;color:var(--muted)}
+      .consent{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:#cbd5e1}
 
-      .accordion { display: grid; gap: 10px; }
-      details {
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        border-radius: 14px; padding: 12px;
-        background: rgba(255, 255, 255, 0.03);
-      }
-      summary { cursor: pointer; font-weight: 700; list-style: none; }
-      summary::-webkit-details-marker { display: none; }
-      .acc-list { margin: 10px 0 0; padding-left: 18px; color: #cbd5e1; }
-
-      .cta {
-        display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;
-        padding: 36px; border-radius: 24px;
-        background:
-          radial-gradient(80% 120% at 0% 0%, rgba(244, 63, 94, 0.12), transparent 60%),
-          radial-gradient(90% 120% at 100% 100%, rgba(96, 165, 250, 0.12), transparent 60%),
-          linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
-
-      .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-      .card {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-        border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 18px;
-      }
-      .card h3 { margin: 0 0 10px; font-size: 18px; }
-      .card p { margin: 0; color: #cbd5e1; line-height: 1.5; }
-
-      .map { border: 0; width: 100%; height: 300px; border-radius: 16px; filter: saturate(110%) contrast(105%); }
-
-      form { display: flex; flex-direction: column; gap: 12px; margin-top: 14px; }
-      input[type="text"], input[type="tel"] {
-        padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2);
-        background: rgba(255,255,255,0.05); color: #e2e8f0;
-      }
-      label { font-size: 14px; color: var(--muted); }
-      .consent { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: #cbd5e1; }
-
-      @media (max-width: 900px) {
-        .grid { grid-template-columns: 1fr; }
-      }
+      @media (max-width: 900px){.hero-wrap{grid-template-columns:1fr;padding:32px 0}.hero-gallery{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}}
+      @media (max-width: 760px){h2{font-size:34px}.hero-gallery{display:flex;gap:14px;overflow-x:auto;padding:4px;margin:0 -8px;scroll-snap-type:x mandatory}.hero-gallery::-webkit-scrollbar{display:none}.hero-photo{min-width:220px;scroll-snap-align:center}}
     </style>
   </head>
   <body>
+    <header>
+      <div class="container nav">
+        <a class="brand" href="#top" aria-label="PROsche">
+          <div class="logo" aria-hidden="true"></div>
+          <h1>PROsche</h1>
+        </a>
+        <nav>
+          <ul>
+            <li><a href="#catalog">Перелік робіт</a></li>
+            <li><a href="#contacts">Контакти</a></li>
+          </ul>
+        </nav>
+        <a class="btn whatsapp" href="https://wa.me/380674837410?text=Привіт!%20Хочу%20записатись%20на%20діагностику" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </header>
+
+    <main id="top" class="hero">
+      <div class="container hero-wrap">
+        <div>
+          <span class="tag">Преміальний автосервіс в Одесі</span>
+          <h2>Глибока діагностика. Чесний сервіс. <span style="background:linear-gradient(90deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">Краще за дилера</span>.</h2>
+          <p class="lead">Porsche • BMW • Mercedes • Audi. Без черг — зазвичай того ж дня. Офіційні стандарти, прозора комунікація, відповідальність за результат.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#contacts">Записатися</a>
+            <a class="btn whatsapp" href="https://wa.me/380674837410?text=Привіт!%20Підкажіть%20вартість%20ТО" target="_blank" rel="noopener">Написати в WhatsApp</a>
+          </div>
+        </div>
+        <div>
+          <div class="hero-gallery">
+            <figure class="hero-photo">
+              <img src="https://raw.githubusercontent.com/Cure26/PROsche/main/ChatGPT%20Image%2030%20%D0%B2%D0%B5%D1%80.%202025%20%D1%80.%2C%2019_57_36.png" alt="PROsche: сервісна зона — фото 1" loading="lazy" decoding="async" />
+              <figcaption>Сервісна зона PROsche — акуратність та контроль якості.</figcaption>
+            </figure>
+            <figure class="hero-photo">
+              <img src="https://raw.githubusercontent.com/Cure26/PROsche/main/ChatGPT%20Image%2030%20%D0%B2%D0%B5%D1%80.%202025%20%D1%80.%2C%2019_57_47.png" alt="PROsche: сервісна зона — фото 2" loading="lazy" decoding="async" />
+              <figcaption>Той самий світ та колір, що й у ваших відео.</figcaption>
+            </figure>
+            <figure class="hero-photo">
+              <img src="https://raw.githubusercontent.com/Cure26/PROsche/main/ChatGPT%20Image%2030%20%D0%B2%D0%B5%D1%80.%202025%20%D1%80.%2C%2019_57_35.png" alt="PROsche: сервісна зона — фото 3" loading="lazy" decoding="async" />
+              <figcaption>Єдиний візуальний стиль для сайту та реклами.</figcaption>
+            </figure>
+            <figure class="hero-photo">
+              <img src="https://raw.githubusercontent.com/Cure26/PROsche/main/ChatGPT%20Image%2030%20%D0%B2%D0%B5%D1%80.%202025%20%D1%80.%2C%2019_57_36.png" alt="PROsche: сервісна зона — фото 4 (дубль до заміни)" loading="lazy" decoding="async" />
+              <figcaption>Можемо замінити на 4‑те фото, коли додаси.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </main>
+
     <!-- Перелік робіт -->
     <section id="catalog" class="section" style="background: rgba(255, 255, 255, 0.02)">
       <div class="container">
@@ -300,5 +327,4 @@
     </script>
   </body>
 </html>
-
 
