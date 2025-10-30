@@ -1,6 +1,81 @@
 <!doctype html>
 <html lang="uk">
-  <head>
+  <head><style>
+  :root{
+    --bg:#0a0a0a; --fg:#f5f5f5; --muted:#bdbdbd; --gold:#d4af37;
+    --accent:#e6c766; --card:#121212; --glass:rgba(255,255,255,.06);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  a{color:inherit;text-decoration:none}
+  .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+  /* Top bar */
+  .site-header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.8);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.5px}
+  .brand-mark{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--gold),var(--accent));box-shadow:0 0 24px rgba(212,175,55,.25)}
+  .brand-name{font-size:18px}
+  .brand-name b{color:var(--gold)}
+  .nav-actions{display:flex;gap:10px;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));font-weight:600}
+  .btn:hover{border-color:rgba(255,255,255,.25)}
+  .btn.gold{background:linear-gradient(135deg,var(--gold),var(--accent));color:#1a1a1a;border:none}
+  .btn.ghost{background:transparent}
+  .btn.small{padding:8px 10px;border-radius:10px;font-size:14px}
+
+  /* Hero */
+  .hero{
+    position:relative;isolation:isolate;min-height:72vh;display:grid;place-items:center;
+    background:
+      radial-gradient(1200px 600px at 10% -10%,rgba(212,175,55,.14),transparent 60%),
+      radial-gradient(900px 500px at 110% 10%,rgba(255,255,255,.06),transparent 60%),
+      #0a0a0a;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background-image:url("assets/hero.jpg");
+    background-size:cover;background-position:center;
+    opacity:.18;filter:contrast(1.05) saturate(1.05) blur(1px);
+  }
+  .hero-wrap{display:grid;gap:18px;padding:64px 0}
+  .eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  .hero h1{margin:0;font-size:40px;line-height:1.08;letter-spacing:.2px}
+  .hero h1 b{color:var(--gold)}
+  .hero p{margin:0;color:#e0e0e0;max-width:720px;font-size:18px;line-height:1.55}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+  .note{font-size:13px;color:var(--muted)}
+
+  /* Info card row */
+  .info-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+  .card{background:var(--glass);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:14px}
+  .card .k{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+  .card .v{font-weight:600;margin-top:6px}
+
+  /* Sticky mobile dock */
+  .dock{
+    position:fixed;bottom:14px;left:50%;transform:translateX(-50%);
+    display:flex;gap:10px;padding:10px 12px;background:rgba(26,26,26,.9);
+    border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(8px);border-radius:16px;z-index:60
+  }
+  .dock .btn{padding:10px 12px}
+  @media (max-width:980px){
+    .hero h1{font-size:32px}
+    .info-row{grid-template-columns:1fr}
+    .nav .btn.hide-sm{display:none}
+  }
+
+  /* Modal */
+  .modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:70;padding:20px}
+  .modal.open{display:flex}
+  .modal-card{background:#0f0f0f;border:1px solid rgba(255,255,255,.12);border-radius:16px;max-width:480px;width:100%;padding:18px}
+  .modal-card h3{margin:0 0 8px 0}
+  .field{display:grid;gap:6px;margin:10px 0}
+  .input{padding:12px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#111;color:#fff}
+  .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+</style>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>PROsche — Перелік робіт та контакти</title>
@@ -88,7 +163,88 @@
       }
     </style>
   </head>
-  <body>
+  <body><header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name"><b>PRO</b>sche Service</span>
+    </a>
+    <div class="nav-actions">
+      <a class="btn small hide-sm" href="https://maps.google.com/?q=Одеса,+вул.+Бугаївська+54/1" target="_blank" rel="noopener">📍 Одеса</a>
+      <a class="btn small" href="tel:+380XXXXXXXXX" data-gtm="call_click">📞 Подзвонити</a>
+      <a class="btn small" href="https://wa.me/380XXXXXXXXX?text=Вітаю! Хочу записатися на діагностику/ТО" target="_blank" rel="noopener" data-gtm="whatsapp_click">💬 WhatsApp</a>
+      <button class="btn gold small" id="openCallback">Зворотній зв’язок</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-wrap">
+    <div class="eyebrow">Преміальний автосервіс</div>
+    <h1>
+      Діагностика, ремонт і ТО для <b>Porsche • BMW • Mercedes • Audi</b><br/>
+      Без черг. Чесно. Як для своїх.
+    </h1>
+    <p>
+      Ті самі майстри й обладнання, що “бачать” більше за стандарт. Комп’ютерна та механічна діагностика, підвіска, гальма, двигун, коробка, шиномонтаж — все в одному місці.
+    </p>
+    <div class="cta">
+      <a class="btn gold" href="tel:+380XXXXXXXXX" data-gtm="call_click">📞 Подзвонити</a>
+      <a class="btn" href="https://wa.me/380XXXXXXXXX?text=Хочу записатися на сьогодні/завтра" target="_blank" rel="noopener" data-gtm="whatsapp_click">💬 Написати в WhatsApp</a>
+      <a class="btn ghost" href="https://maps.google.com/?q=Одеса,+вул.+Бугаївська+54/1" target="_blank" rel="noopener">📍 Маршрут</a>
+      <button class="btn" id="openCallback2">📝 Залишити заявку</button>
+    </div>
+    <div class="info-row">
+      <div class="card">
+        <div class="k">Адреса</div>
+        <div class="v">Одеса, вул. Бугаївська 54/1</div>
+      </div>
+      <div class="card">
+        <div class="k">Графік</div>
+        <div class="v">Пн–Сб 9:00–19:00 • Без черг за записом</div>
+      </div>
+      <div class="card">
+        <div class="k">Контакти</div>
+        <div class="v"><a href="tel:+380XXXXXXXXX">+380&nbsp;XX&nbsp;XXX&nbsp;XX&nbsp;XX</a></div>
+      </div>
+    </div>
+    <div class="note">Порада: додайте фото у <code>assets/hero.jpg</code> (широкий кадр авто/бокс) — фон підтягнеться автоматично.</div>
+  </div>
+</section>
+
+<!-- Мобільний док -->
+<div class="dock">
+  <a class="btn gold" href="tel:+380XXXXXXXXX" data-gtm="call_click">📞 Дзвінок</a>
+  <a class="btn" href="https://wa.me/380XXXXXXXXX?text=Вітаю! Підкажіть щодо сервісу" target="_blank" rel="noopener" data-gtm="whatsapp_click">💬 WhatsApp</a>
+  <button class="btn" id="openCallback3">📝 Заявка</button>
+</div>
+
+<!-- Модалка зворотнього зв'язку -->
+<div class="modal" id="callbackModal" aria-hidden="true">
+  <div class="modal-card">
+    <h3>Залишити заявку</h3>
+    <p class="note">Вкажіть телефон — ми перетелефонуємо протягом 10–15 хвилин у робочий час.</p>
+    <form id="callbackForm" class="form">
+      <div class="field">
+        <label>Ім’я</label>
+        <input class="input" name="name" placeholder="Як до вас звертатися?" required>
+      </div>
+      <div class="field">
+        <label>Телефон</label>
+        <input class="input" name="phone" placeholder="+380…" required>
+      </div>
+      <div class="field">
+        <label>Коментар (необов’язково)</label>
+        <textarea class="input" name="msg" rows="3" placeholder="Марка/модель, що турбує"></textarea>
+      </div>
+      <div class="row">
+        <button class="btn gold" type="submit">Відправити</button>
+        <button class="btn" type="button" id="closeCallback">Скасувати</button>
+      </div>
+    </form>
+  </div>
+</div>
+
     <!-- Перелік робіт -->
     <section id="catalog" class="section" style="background: rgba(255, 255, 255, 0.02)">
       <div class="container">
