@@ -454,7 +454,40 @@
         form.reset();
       });
     </script>
-  </body>
+  <script>
+  // Відкриття/закриття модалки
+  const modal = document.getElementById('callbackModal');
+  const openBtns = [document.getElementById('openCallback'), document.getElementById('openCallback2'), document.getElementById('openCallback3')].filter(Boolean);
+  const closeBtn = document.getElementById('closeCallback');
+  openBtns.forEach(btn=>btn && btn.addEventListener('click', ()=>modal.classList.add('open')));
+  closeBtn && closeBtn.addEventListener('click', ()=>modal.classList.remove('open'));
+  modal && modal.addEventListener('click', (e)=>{ if(e.target===modal) modal.classList.remove('open'); });
+
+  // Відправка заявки без бекенду: переадресація в WhatsApp з попередньо заповненим текстом
+  document.getElementById('callbackForm')?.addEventListener('submit', function(e){
+    e.preventDefault();
+    const fd = new FormData(this);
+    const name = fd.get('name')||'';
+    const phone = fd.get('phone')||'';
+    const msg = fd.get('msg')||'';
+    const text = encodeURIComponent(`Заявка з сайту PROsche:%0AІм’я: ${name}%0AТелефон: ${phone}%0AКоментар: ${msg}`);
+    // ВАЖЛИВО: замініть нижче на ваш номер WhatsApp у форматі 380XXXXXXXXX
+    const wa = `https://wa.me/380XXXXXXXXX?text=${text}`;
+    // GTM подія (якщо dataLayer існує)
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({event:'form_submit', form:'callback'});
+    window.location.href = wa;
+  });
+
+  // Клік-події для GTM
+  document.querySelectorAll('[data-gtm]').forEach(el=>{
+    el.addEventListener('click', ()=>{
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({event: el.dataset.gtm});
+    });
+  });
+</script>
+</body>
 </html>
 
 
