@@ -1,384 +1,104 @@
 <!doctype html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>PROSCHE | Premium Auto Service Odesa — запис +380674837410</title>
-  <meta name="description" content="PROSCHE — преміальний автосервіс в Одесі (вул. Бугаївська 54/1). Діагностика, ремонт, дітейлінг, VIP-пакети. Запис через WhatsApp або дзвінок." />
-  <meta name="keywords" content="сервіс Porsche Одеса, ремонт Mercedes Одеса, преміум сервіс авто Одеса, діагностика преміум авто Одеса" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="PROSCHE | Premium Auto Service Odesa" />
-  <meta property="og:description" content="Якщо твоя машина — частина тебе, ми знайдемо спільну мову. Запис: +380674837410" />
-  <meta property="og:image" content="/images/hero.webp" />
-  <meta property="og:type" content="website" />
-
-  <!-- JSON-LD (LocalBusiness / AutoRepair) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"AutoRepair",
-    "name":"PROSCHE | Premium Auto Service Odesa",
-    "url":"https://prosche.com.ua",
-    "telephone":"+380674837410",
-    "address": {
-      "@type":"PostalAddress",
-      "streetAddress":"вул. Бугаївська 54/1",
-      "addressLocality":"Одеса",
-      "addressCountry":"UA"
-    },
-    "openingHours":"Mo-Fr 10:00-19:00, Sa 10:00-17:00",
-    "sameAs":[
-      "https://www.instagram.com/prosche.service",
-      "https://www.facebook.com/share/16M8BxXNS1/"
-    ]
-  }
-  </script>
-
-  <style>
-    /* ---- Базові стилі (чорний преміум дизайн) ---- */
-    :root{
-      --bg:#0b0d10;
-      --card:#111316;
-      --muted:#9aa0a6;
-      --accent:#c9a86b; /* теплий металевий акцент */
-      --white:#f6f6f6;
-      --red:#d00000;
-      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    html,body{height:100%;margin:0;background:var(--bg);color:var(--white);-webkit-font-smoothing:antialiased;}
-    a{color:inherit;text-decoration:none;}
-    .container{max-width:1100px;margin:0 auto;padding:28px;}
-    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
-    .logo{display:flex;align-items:center;gap:14px;}
-    .logo img{height:56px;}
-    nav ul{display:flex;gap:18px;align-items:center;margin:0;padding:0;list-style:none;}
-    nav a {color:var(--muted);font-size:14px;}
-    .cta{display:flex;gap:12px;}
-    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 16px;border-radius:8px;color:var(--white);font-weight:600;cursor:pointer;}
-    .btn.primary{background:linear-gradient(90deg,var(--accent),#b79057);color:#080808;border:none;}
-    .hero{display:grid;grid-template-columns:1fr 520px;gap:36px;padding:46px 0;align-items:center;}
-    .hero-left h1{font-size:40px;line-height:1.02;margin:0 0 12px;}
-    .hero-left p{color:var(--muted);margin:0 0 20px;}
-    .hero-ctas{display:flex;gap:12px;}
-    .hero-image{background:#050607;border-radius:10px;overflow:hidden;display:flex;justify-content:center;align-items:center}
-    .hero-image img{width:100%;height:auto;display:block;object-fit:cover;}
-    .section{padding:48px 0;border-top:1px solid rgba(255,255,255,0.03);}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-    .card{background:var(--card);padding:18px;border-radius:10px;}
-    .muted{color:var(--muted)}
-    footer{padding:28px 0;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;align-items:center;}
-    /* services dropdown */
-    .services-list{display:flex;flex-direction:column;gap:12px;}
-    .service-item{background:transparent;border-radius:8px;padding:12px;border:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;align-items:center;cursor:pointer;}
-    .service-item h4{margin:0;font-size:16px}
-    .service-details{display:none;padding-top:12px;color:var(--muted);font-size:14px}
-    .service-item.open .service-details{display:block}
-    /* form */
-    .form{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.015));padding:18px;border-radius:10px;}
-    .form input, .form select, .form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--white);margin-bottom:12px;}
-    .small{font-size:13px;color:var(--muted)}
-    /* responsive */
-    @media(max-width:980px){
-      .hero{grid-template-columns:1fr;gap:20px}
-      .grid-3{grid-template-columns:1fr}
-      nav ul{display:none}
-      .logo img{height:48px}
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>PROsche | Premium Auto Service Odesa</title>
+<meta name="description" content="PROsche — преміальний автосервіс в Одесі. Porsche, Mercedes, BMW, Audi. ТО, ремонт двигуна і трансмісії, підвіска, гальма. Без черг, чесно та швидко." />
+<meta property="og:title" content="PROsche — Преміальний автосервіс в Одесі" />
+<meta property="og:description" content="Діагностика і ремонт Porsche, Mercedes, BMW, Audi на вул. Бугаївська 54/1. Без черг, чесно, краще за дилера." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#0a0a0a" />
+<style>
+:root{
+  --bg:#0a0a0a;--text:#f5f5f5;--muted:#b3b3b3;
+  --gold:#c9a86b;--gold2:#b88b3e;
+  font-family:Inter,system-ui,"Segoe UI",Roboto,Arial,sans-serif
+}
+body{margin:0;background:var(--bg);color:var(--text)}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;background:rgba(0,0,0,.6);backdrop-filter:blur(8px);display:flex;justify-content:space-between;align-items:center;padding:16px 24px;z-index:20}
+nav ul{list-style:none;display:flex;gap:20px;margin:0;padding:0}
+nav a{color:var(--muted);font-size:14px}
+.btn{padding:10px 18px;border-radius:10px;font-weight:700}
+.btn.gold{background:linear-gradient(90deg,var(--gold),var(--gold2));color:#000;border:none}
+.hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px;padding:60px 24px;border-bottom:1px solid rgba(255,255,255,.05)}
+.hero img{width:100%;height:auto;border-radius:12px}
+@media(max-width:900px){.hero{grid-template-columns:1fr}}
+.section{padding:60px 24px}
+.section h2{color:var(--gold);font-size:32px;margin-top:0}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+.gallery img{width:100%;height:220px;object-fit:cover;border-radius:10px}
+.map{width:100%;height:320px;border:0;border-radius:10px;margin-top:12px}
+footer{border-top:1px solid rgba(255,255,255,.1);padding:24px;color:var(--muted);font-size:14px;text-align:center}
+</style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="logo">
-        <!-- logo: place /images/logo.png (transparent background) -->
-        <img src="/images/logo.png" alt="PROsche.service логотип" />
-        <div style="line-height:1;">
-          <div style="font-weight:700">PROSCHE</div>
-          <div class="small muted">Premium Auto Service · Одеса</div>
-        </div>
-      </div>
 
-      <nav>
-        <ul>
-          <li><a href="#about">Про нас</a></li>
-          <li><a href="#services">Послуги</a></li>
-          <li><a href="#gallery">Галерея</a></li>
-          <li><a href="#contact">Контакти</a></li>
-        </ul>
-      </nav>
+<header>
+  <div><strong style="color:var(--gold)">PROsche</strong> service</div>
+  <nav>
+    <ul>
+      <li><a href="#services">Послуги</a></li>
+      <li><a href="#gallery">Галерея</a></li>
+      <li><a href="#contacts">Контакти</a></li>
+    </ul>
+  </nav>
+  <a class="btn gold" href="https://wa.me/380674837410?text=Привіт!%20Хочу%20записатись%20на%20діагностику" target="_blank">WhatsApp</a>
+</header>
 
-      <div class="cta">
-        <!-- quick call -->
-        <a class="btn" href="tel:+380674837410">Подзвонити</a>
-        <!-- WhatsApp quick (also used as form target) -->
-        <a class="btn primary" id="whatsapp-btn" href="https://wa.me/380674837410?text=Запис%20на%20сервіс%20(PROSCHE):%20" target="_blank">Записатись</a>
-      </div>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero" id="home" role="banner">
-      <div class="hero-left">
-        <h1>Тигри не їдять кашу.<br>Преміум-авто не живе в брудному гаражі.</h1>
-        <p class="muted">Ми зберегли головне — точність, обладнання та увагу до деталей. Якщо твоя машина — частина тебе, ми знайдемо спільну мову.</p>
-        <div class="hero-ctas">
-          <a class="btn primary" href="https://wa.me/380674837410?text=Запис%20на%20сервіс%20(PROSCHE):%20Я%20хочу%20записатись" target="_blank">Записатись у WhatsApp</a>
-          <a class="btn" href="tel:+380674837410">Подзвонити зараз</a>
-        </div>
-        <div style="margin-top:16px;color:var(--muted);font-size:13px">
-          Чесні умови · Гнучкість у оплаті · Розуміння ситуації — для своїх.
-        </div>
-      </div>
-
-      <div class="hero-image" aria-hidden="false">
-        <!-- hero image: /images/hero.webp -->
-        <img src="/images/hero.webp" alt="Mercedes GLE у преміум сервісі PROsche.service в Одесі" />
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2>Про нас</h2>
-        <p class="muted">Ми — коло людей, які тримають рівень. Приміщення не найкраще зараз, але техніка, майстри та підхід — ті самі. Приїжджай, домовимось — і твоя машина отримає те, до чого ти звик.</p>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="section">
-      <div class="container">
-        <h2>Послуги</h2>
-        <p class="muted">Прокрути вниз, щоб побачити категорії. Кожна розгортається — і там деталі.</p>
-
-        <div class="services-list" aria-live="polite">
-          <!-- Service block (click to open) -->
-          <div class="service-item" data-id="diag">
-            <div style="display:flex;gap:12px;align-items:center;">
-              <div>
-                <h4>Діагностика та ТО</h4>
-                <div class="small muted">Комп'ютерна діагностика, планове ТО, заміна оливи та фільтрів</div>
-              </div>
-            </div>
-            <div style="display:flex;gap:10px;align-items:center;">
-              <a class="btn" href="https://wa.me/380674837410?text=Запит%20по%20Діагностиці%20(PROSCHE):">Запис</a>
-            </div>
-
-            <div class="service-details">
-              <ul class="muted">
-                <li>Комп’ютерна діагностика всіх систем</li>
-                <li>Планове ТО: масла, фільтри, свічки, рідини</li>
-                <li>Перевірка заряду акумулятора, прописка/адаптація</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="service-item" data-id="engine">
-            <div>
-              <h4>Двигун і трансмісія</h4>
-              <div class="small muted">Ремонт двигунів, коробок, прошивка ЕБУ</div>
-            </div>
-            <div>
-              <a class="btn" href="https://wa.me/380674837410?text=Запит%20по%20Двигуну%20(PROSCHE):">Запис</a>
-            </div>
-            <div class="service-details">
-              <ul class="muted">
-                <li>Капітальний/контрактний ремонт двигуна</li>
-                <li>Ремонт коробок (АКПП, DSG, МКПП)</li>
-                <li>Прошивка ЕБУ, чіп-тюнінг</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="service-item" data-id="susp">
-            <div>
-              <h4>Підвіска, гальма, колеса</h4>
-              <div class="small muted">Ремонти ходової, розвал/сходження, шиномонтаж</div>
-            </div>
-            <div>
-              <a class="btn" href="https://wa.me/380674837410?text=Запит%20по%20Підвісці%20(PROSCHE):">Запис</a>
-            </div>
-            <div class="service-details">
-              <ul class="muted">
-                <li>Перевірка та ремонт підвіски</li>
-                <li>Гальма — перевірка/заміна колодок і дисків</li>
-                <li>Балансування і сезонна переобувка</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="service-item" data-id="elec">
-            <div>
-              <h4>Електроніка та безпека</h4>
-              <div class="small muted">Активації функцій, ADAS, встановлення сигналізації</div>
-            </div>
-            <div>
-              <a class="btn" href="https://wa.me/380674837410?text=Запит%20по%20Електроніці%20(PROSCHE):">Запис</a>
-            </div>
-            <div class="service-details">
-              <ul class="muted">
-                <li>Діагностика електроніки, скидання помилок</li>
-                <li>Налаштування ADAS, калібрування</li>
-                <li>Встановлення GPS, іммобілайзерів</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="service-item" data-id="body">
-            <div>
-              <h4>Кузов та лакофарбові роботи</h4>
-              <div class="small muted">Локальні ремонти, фарбування, PDR</div>
-            </div>
-            <div>
-              <a class="btn" href="https://wa.me/380674837410?text=Запит%20по%20Кузову%20(PROSCHE):">Запис</a>
-            </div>
-            <div class="service-details">
-              <ul class="muted">
-                <li>Локальний ремонт вм’ятин без фарбування (PDR)</li>
-                <li>Повне відновлення кузова, підбір фарб</li>
-                <li>Антикорозійна обробка, заміна скла</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="service-item" data-id="detail">
-            <div>
-              <h4>Детейлінг та тюнінг</h4>
-              <div class="small muted">Полірування, покриття, перетяжка салону</div>
-            </div>
-            <div>
-              <a class="btn" href="https://wa.me/380674837410?text=Запит%20по%20Детейлінгу%20(PROSCHE):">Запис</a>
-            </div>
-            <div class="service-details">
-              <ul class="muted">
-                <li>Полірування, покриття PPF</li>
-                <li>Перетяжка салону шкірою / алькантарою</li>
-                <li>Шумоізоляція, преміальна акустика</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY CHOOSE -->
-    <section id="why" class="section">
-      <div class="container">
-        <h2>Чому нас обирають</h2>
-        <div class="grid-3" style="margin-top:18px;">
-          <div class="card">
-            <h4>Рівень без компромісів</h4>
-            <p class="muted">Обладнання та майстри, які знають свою справу. Ми не ламали стандарти — змінився тільки фасад.</p>
-          </div>
-          <div class="card">
-            <h4>Гнучкі умови для своїх</h4>
-            <p class="muted">Чесні ціни, можливість розтермінування, індивідуальні рішення. Ми знайдемо шлях.</p>
-          </div>
-          <div class="card">
-            <h4>Підтримка і довіра</h4>
-            <p class="muted">Пояснимо кожну деталь, покажемо варіанти. Ми працюємо з людьми, а не з номерами в чеку.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="section">
-      <div class="container">
-        <h2>Галерея</h2>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px;">
-          <img src="/images/garage.webp" alt="Панорама преміального автосервісу PROsche.service" style="width:100%;border-radius:8px;object-fit:cover" />
-          <img src="/images/mechanic.webp" alt="Механік проводить діагностику двигуна у PROsche.service" style="width:100%;border-radius:8px;object-fit:cover" />
-          <img src="/images/interior.webp" alt="Салон преміального авто — реставрація та дітейлінг" style="width:100%;border-radius:8px;object-fit:cover" />
-        </div>
-      </div>
-    </section>
-
-    <!-- OFFER -->
-    <section id="offer" class="section">
-      <div class="container">
-        <h2>Спеціальна пропозиція</h2>
-        <p class="muted">Місця на спеціальних умовах обмежені. Якщо ти зі свого кола — залиш заявку у WhatsApp або просто подзвони.</p>
-
-        <!-- FORM (opens WhatsApp with prefilled text) -->
-        <div style="margin-top:18px;max-width:720px;">
-          <div class="form">
-            <label class="small">Ім'я</label>
-            <input id="fname" placeholder="Ваше ім'я" />
-            <label class="small">Телефон</label>
-            <input id="phone" placeholder="+380..." />
-            <label class="small">Марка / Модель</label>
-            <input id="model" placeholder="Mercedes GLE / Porsche 911" />
-            <label class="small">Послуга</label>
-            <select id="service-select">
-              <option>Діагностика</option>
-              <option>Технічне обслуговування</option>
-              <option>Ремонт двигуна</option>
-              <option>Кузов / Детейлінг</option>
-            </select>
-            <label class="small">Коментар</label>
-            <textarea id="comment" rows="3" placeholder="Коротко (необов'язково)"></textarea>
-            <div style="display:flex;gap:8px;align-items:center;margin-top:6px;">
-              <button id="send-wa" class="btn primary">Відправити у WhatsApp</button>
-              <a class="btn" href="tel:+380674837410">Подзвонити зараз</a>
-            </div>
-            <div class="small muted" style="margin-top:10px;">Натиснувши «Відправити», ви відкриєте WhatsApp із готовим повідомленням.</div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Контакти</h2>
-        <p class="muted">Адреса: вул. Бугаївська 54/1, Одеса</p>
-        <p class="muted">Телефон / WhatsApp / Telegram: <a href="tel:+380674837410">+380 67 483 7410</a></p>
-        <p class="muted">Instagram: <a href="https://www.instagram.com/prosche.service" target="_blank">@prosche.service</a></p>
-        <div style="height:260px;margin-top:12px;border-radius:8px;overflow:hidden;background:#0a0b0c">
-          <!-- Optional: iframe Google Maps (paste your embed code) -->
-          <iframe src="https://www.google.com/maps?q=PROsche%20service%20Одеса&output=embed" style="width:100%;height:100%;border:0;"></iframe>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div>© PROSCHE | Premium Auto Service Odesa</div>
-      <div class="muted">вул. Бугаївська 54/1 · <a href="tel:+380674837410">+380674837410</a></div>
-    </footer>
+<section class="hero">
+  <div>
+    <h1 style="font-size:40px;margin:0">Твоя машина — частина тебе.</h1>
+    <p style="color:var(--muted);font-size:18px;margin-top:12px">
+      Ми знайдемо спільну мову. Діагностика, ремонт і догляд для Porsche, Mercedes, BMW та Audi в Одесі.
+    </p>
+    <div style="margin-top:20px">
+      <a class="btn gold" href="tel:+380674837410">Подзвонити зараз</a>
+    </div>
   </div>
+  <img src="https://drive.google.com/uc?export=view&id=18FaMOrQnouA1BHdSSYAZKifO6doY58te" alt="PROsche hero photo">
+</section>
 
-  <!-- Hidden Russian SEO block (as requested) -->
-  <div style="display:none;" lang="ru" aria-hidden="true">
-    <h2>PROSCHE — премиум сервис Одесса</h2>
-    <p>Диагностика, ремонт двигателей, обслуживание Mercedes, Porsche, BMW. Запись по телефону +380674837410</p>
-    <p>сервис Porsche Одесса, ремонт Mercedes Одесса, чип тюнинг Одесса</p>
+<section id="services" class="section">
+  <h2>Послуги</h2>
+  <ul style="color:var(--muted);line-height:1.6">
+    <li>Компʼютерна та механічна діагностика</li>
+    <li>ТО: оливи, фільтри, свічки, рідини</li>
+    <li>Ремонт двигуна і трансмісії (АКПП, DSG, МКПП)</li>
+    <li>Гальма, підвіска, балансування</li>
+    <li>Електроніка і чіп-тюнінг</li>
+  </ul>
+</section>
+
+<section id="gallery" class="section">
+  <h2>Галерея</h2>
+  <div class="gallery">
+    <img src="https://drive.google.com/uc?export=view&id=1hV6Bp0xoMN5i65Orvn-IWTv_ggVNtYjM" alt="garage interior">
+    <img src="https://drive.google.com/uc?export=view&id=1TWjvViTpob6uoS4kjTEB1113i2-RAW39" alt="work bay">
+    <img src="https://drive.google.com/uc?export=view&id=1mOaLcTqgB_jtEHy_rAVOKEkoVGwSw9em" alt="details">
+    <img src="https://drive.google.com/uc?export=view&id=15EAm8Nl352S3JfairAU-AEyJI_I_ukST" alt="mechanical tools">
+    <img src="https://drive.google.com/uc?export=view&id=11KhJt5nduWgJ0TdnBPbwzXMJJEqO865R" alt="engine bay">
+    <img src="https://drive.google.com/uc?export=view&id=1m1c8R088TNf7_iYoPxRkrQabIdgf0Ocq" alt="premium cars">
+    <img src="https://drive.google.com/uc?export=view&id=1gCqQkKCxNccPV7qTUjeLsr5ICdW2dQG-" alt="exterior shot">
+    <img src="https://drive.google.com/uc?export=view&id=10M-w7nz3vZVuvEYJOIHj0965GPas1Lxx" alt="detailing">
+    <img src="https://drive.google.com/uc?export=view&id=1zIzZ2z4WfpqPJYFXIXGEIc0yW87FMKEK" alt="close up luxury finish">
   </div>
+</section>
 
-  <script>
-    // simple dropdown/open logic for services
-    document.querySelectorAll('.service-item').forEach(item=>{
-      item.addEventListener('click', (e)=>{
-        // toggle open, close others
-        const opened = item.classList.contains('open');
-        document.querySelectorAll('.service-item').forEach(i=>i.classList.remove('open'));
-        if(!opened) item.classList.add('open');
-      });
-    });
+<section id="contacts" class="section">
+  <h2>Контакти</h2>
+  <p>вул. Бугаївська 54/1, Одеса · Пн-Пт 10-19, Сб 10-17</p>
+  <p>Телефон: <a href="tel:+380674837410">+38 (067) 483 74 10</a> · Instagram: <a href="https://instagram.com/prosche.service" target="_blank">@prosche.service</a></p>
+  <iframe class="map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.353773468784!2d30.71921947682621!3d46.44024007109525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c631a37fbbf0db%3A0xf30d6d7b4a11a317!2sPROsche%20Service!5e0!3m2!1suk!2sua!4v1730925260954!5m2!1suk!2sua"
+    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
 
-    // WhatsApp form
-    document.getElementById('send-wa').addEventListener('click', ()=>{
-      const name = encodeURIComponent(document.getElementById('fname').value || '—');
-      const phone = encodeURIComponent(document.getElementById('phone').value || '—');
-      const model = encodeURIComponent(document.getElementById('model').value || '—');
-      const service = encodeURIComponent(document.getElementById('service-select').value);
-      const comment = encodeURIComponent(document.getElementById('comment').value || '');
-      const text = `Запис%20(PROSCHE)%0AІм'я:%20${name}%0AТелефон:%20${phone}%0AМодель:%20${model}%0AПослуга:%20${service}%0AКоментар:%20${comment}`;
-      const url = `https://wa.me/380674837410?text=${text}`;
-      window.open(url,'_blank');
-    });
-  </script>
+<footer>© <span id="year"></span> PROsche · Premium Auto Service Odesa</footer>
 
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
