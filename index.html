@@ -25,32 +25,22 @@
     }
     a { color: inherit; text-decoration: none; }
     .container { max-width: 1180px; margin: auto; padding: 20px; }
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(0,0,0,.55);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--line);
+    header img.banner {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
     }
     .nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 20px 0;
     }
     .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--gold);
+      font-size: 28px;
       font-weight: 800;
-    }
-    .brand img {
-      height: 40px;
-      width: 40px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 1px solid var(--line);
+      color: var(--gold);
     }
     nav ul {
       display: flex;
@@ -83,41 +73,26 @@
       color: #fff;
     }
     .hero {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 24px;
-      align-items: center;
-      padding: 34px 0;
-      border-bottom: 1px solid var(--line);
-    }
-    @media(max-width:900px) {
-      .hero { grid-template-columns: 1fr; }
-    }
-    h1 {
-      font-size: 44px;
-      line-height: 1.1;
-      margin: 12px 0 10px;
+      text-align: center;
+      padding: 40px 20px;
     }
     .lead {
       color: var(--muted);
-      font-size: 18px;
-      max-width: 680px;
+      font-size: 20px;
+      max-width: 800px;
+      margin: auto;
     }
-    .hero-img {
-      border-radius: var(--radius);
-      overflow: hidden;
-      border: 1px solid var(--line);
-    }
-    .hero-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+    .hero-cta {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
     }
     section { padding: 44px 0; }
     h2 {
       font-size: 32px;
-      margin: 0 0 8px;
+      margin-bottom: 16px;
       color: var(--gold);
     }
     .accordion { display: grid; gap: 10px; }
@@ -140,7 +115,6 @@
     .acc-body ul {
       margin: 8px 0 0 18px;
     }
-    .muted { color: var(--muted); }
     .grid2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -166,43 +140,40 @@
       padding: 16px 0;
       color: var(--muted);
       font-size: 14px;
+      text-align: center;
     }
   </style>
 </head>
 
 <body>
+  <!-- Full-width logo banner -->
   <header>
+    <img class="banner" src="https://raw.githubusercontent.com/Cure26/PROsche/main/logo.png" alt="PROsche логотип" />
     <div class="container nav">
-      <a class="brand" href="#top">
-        <img src="https://raw.githubusercontent.com/Cure26/PROsche/main/logo.png" alt="PROsche логотип" />
-        PROsche
-      </a>
+      <div class="brand">PROsche</div>
       <nav>
         <ul>
           <li><a href="#services">Послуги</a></li>
           <li><a href="#contacts">Контакти</a></li>
         </ul>
       </nav>
-      <div style="display:flex;gap:10px">
+      <div>
         <a class="btn ghost" href="tel:+380674837410">📞 Подзвонити</a>
         <a class="btn gold" href="https://wa.me/380674837410?text=Привіт!%20Хочу%20записатись%20на%20сервіс" target="_blank">WhatsApp</a>
       </div>
     </div>
   </header>
 
-  <main id="top" class="container hero">
-    <div>
-      <p class="lead">Porsche • Mercedes • BMW • Audi. Сервіс для тих, хто не знижує планку. Ми залишились тими самими — чесними, уважними, вимогливими до деталей.</p>
-      <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
-        <a class="btn gold" href="https://wa.me/380674837410?text=Запис%20на%20діагностику" target="_blank">Записатись</a>
-        <a class="btn ghost" href="#contacts">Контакти</a>
-      </div>
-    </div>
-    <div class="hero-img">
-      <img src="https://drive.google.com/uc?export=view&id=15EAm8Nl352S3JfairAU-AEyJI_I_ukST" alt="Головне фото PROsche" />
+  <!-- Hero -->
+  <main class="hero">
+    <p class="lead">Porsche • Mercedes • BMW • Audi. Сервіс для тих, хто не знижує планку. Ми залишились тими самими — чесними, уважними, вимогливими до деталей.</p>
+    <div class="hero-cta">
+      <a class="btn gold" href="https://wa.me/380674837410?text=Запис%20на%20діагностику" target="_blank">Записатись</a>
+      <a class="btn ghost" href="#contacts">Контакти</a>
     </div>
   </main>
 
+  <!-- Services -->
   <section id="services" class="container">
     <h2>Послуги</h2>
     <div class="accordion">
@@ -216,15 +187,48 @@
           </ul>
         </div>
       </details>
-      <!-- Додай інші блоки послуг тут -->
+      <details>
+        <summary>ТО та витратні матеріали</summary>
+        <div class="acc-body">
+          <ul>
+            <li>Олива, фільтри, свічки, рідини</li>
+            <li>Перевірка акумулятора, адаптація АКБ</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary>Гальмівна система</summary>
+        <div class="acc-body">
+          <ul>
+            <li>Заміна колодок, дисків, обслуговування супортів</li>
+            <li>Антискрипові рішення</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary>Підвіска</summary>
+        <div class="acc-body">
+          <ul>
+            <li>Амортизатори, важелі, сайлентблоки</li>
+            <li>Розвал-сходження та балансування</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary>Двигун та трансмісія</summary>
+        <div class="acc-body">
+          <ul>
+            <li>Ремонт ГРМ, АКПП, DSG, МКПП</li>
+            <li>Помпа, термостат, сальники, герметичність</li>
+          </ul>
+        </div>
+      </details>
     </div>
   </section>
 
+  <!-- Contacts -->
   <section id="contacts">
     <div class="container grid2">
       <div class="card">
         <h2>Контакти</h2>
-        <p class="muted">Одеса, вул. Бугаївська 54/1</p>
-        <p>Пн–Сб 09:00–19:00</p>
-        <p><strong>Телефон:</strong> <a href="tel:+380674837410">+38 (067) 483 74 10</a></p>
-        <p><strong>Instagram:</
+        <p class="muted">Одеса, вул.
