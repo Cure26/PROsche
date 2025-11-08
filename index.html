@@ -4,28 +4,28 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PROsche — Преміальний автосервіс в Одесі | Porsche, Mercedes, BMW, Audi</title>
-  <meta name="description" content="PROsche — преміальний сервіс у Одесі: діагностика, ТО, двигун, трансмісія, гальма, підвіска, електроніка. Без черг, чесно і акуратно." />
+  <meta name="description" content="PROsche — преміальний автосервіс в Одесі: Porsche, Mercedes, BMW, Audi. Глибока діагностика, ТО, ремонт, розвал-сходження. Чесно, точно, акуратно." />
+  <meta name="theme-color" content="#0a0a0a" />
   <meta property="og:title" content="PROsche — Преміальний автосервіс в Одесі" />
-  <meta property="og:description" content="Porsche • Mercedes • BMW • Audi. Чесно, акуратно, як для себе. Запис у WhatsApp або телефоном." />
+  <meta property="og:description" content="Porsche • Mercedes • BMW • Audi. Сервіс для тих, хто цінує якість навіть у непрості часи." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://prosche.com.ua/" />
   <meta property="og:image" content="https://drive.google.com/uc?export=view&id=15EAm8Nl352S3JfairAU-AEyJI_I_ukST" />
-  <meta name="theme-color" content="#0a0a0a" />
   <link rel="icon" href="https://drive.google.com/uc?export=view&id=1m1c8R088TNf7_iYoPxRkrQabIdgf0Ocq" />
 
   <style>
     :root{
-      --bg:#0a0a0a; --panel:#0d0d0f; --text:#f5f5f5; --muted:#a9a9ad;
+      --bg:#0a0a0a; --text:#f5f5f5; --muted:#a9a9ad;
       --gold:#c9a86b; --gold2:#b88b3e; --line:rgba(255,255,255,.08);
       --radius:14px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
     a{color:inherit;text-decoration:none}
     .container{max-width:1180px;margin:auto;padding:20px}
     header{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--gold)}
+    .nav{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px;color:var(--gold);font-weight:800}
     .brand img{height:40px;width:40px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}
     nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
     nav a{color:var(--muted);font-weight:600}
@@ -36,236 +36,134 @@
     /* HERO */
     .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:34px 0;border-bottom:1px solid var(--line)}
     @media(max-width:900px){.hero{grid-template-columns:1fr}}
-    .tag{display:inline-block;padding:7px 12px;border-radius:999px;border:1px solid var(--line);color:var(--gold);background:rgba(201,168,107,.12);font-weight:800;font-size:12px}
-    h1{font-size:44px;line-height:1.04;margin:12px 0 10px}
+    h1{font-size:44px;line-height:1.1;margin:12px 0 10px}
     .lead{color:var(--muted);font-size:18px;max-width:680px}
     .hero-img{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
     .hero-img img{width:100%;height:100%;object-fit:cover;display:block}
-    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-    .badge{font-size:12px;padding:8px 12px;border-radius:999px;border:1px solid var(--line);color:#d5d5d8;background:rgba(255,255,255,.03)}
-    /* SERVICES ACCORDION */
+    /* ACCORDION */
     section{padding:44px 0}
     h2{font-size:32px;margin:0 0 8px;color:var(--gold)}
-    p.section-lead{color:var(--muted);margin:0 0 10px}
-    .services{display:grid;grid-template-columns:1fr .9fr;gap:22px}
-    @media(max-width:1000px){.services{grid-template-columns:1fr}}
     .accordion{display:grid;gap:10px}
-    details{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015));border:1px solid var(--line);border-radius:var(--radius);padding:12px}
-    summary{cursor:pointer;list-style:none;font-weight:800}
+    details{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:var(--radius);padding:12px}
+    summary{cursor:pointer;font-weight:700;list-style:none}
     summary::-webkit-details-marker{display:none}
     .acc-body{color:#d6d6da;margin-top:6px}
     .acc-body ul{margin:8px 0 0 18px}
-    .service-visual{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    .service-visual img{width:100%;height:240px;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
-    /* GALLERY */
-    .gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
-    @media(max-width:1100px){.gallery{grid-template-columns:repeat(3,1fr)}}
-    @media(max-width:700px){.gallery{grid-template-columns:repeat(2,1fr)}}
-    .gallery img{width:100%;height:200px;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
-    /* CONTACTS */
+    .muted{color:var(--muted)}
+    /* CONTACT */
     .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
     @media(max-width:900px){.grid2{grid-template-columns:1fr}}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));border:1px solid var(--line);border-radius:var(--radius);padding:16px}
-    .muted{color:var(--muted)}
+    .card{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
     iframe.map{width:100%;height:320px;border:0;border-radius:12px}
     footer{border-top:1px solid var(--line);padding:16px 0;color:var(--muted);font-size:14px}
   </style>
 </head>
 
 <body>
-  <!-- NAV -->
   <header>
     <div class="container nav">
-      <a class="brand" href="#top" aria-label="PROsche">
-        <img src="https://drive.google.com/uc?export=view&id=1m1c8R088TNf7_iYoPxRkrQabIdgf0Ocq" alt="Логотип PROsche">
-        <span>PROsche</span>
-      </a>
+      <a class="brand" href="#top"><img src="https://drive.google.com/uc?export=view&id=1m1c8R088TNf7_iYoPxRkrQabIdgf0Ocq" alt="PROsche логотип">PROsche</a>
       <nav>
         <ul>
           <li><a href="#services">Послуги</a></li>
-          <li><a href="#gallery">Галерея</a></li>
           <li><a href="#contacts">Контакти</a></li>
         </ul>
       </nav>
       <div style="display:flex;gap:10px">
         <a class="btn ghost" href="tel:+380674837410">📞 Подзвонити</a>
-        <a class="btn gold" href="https://wa.me/380674837410?text=Привіт!%20Хочу%20записатись%20на%20діагностику" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn gold" href="https://wa.me/380674837410?text=Привіт!%20Хочу%20записатись%20на%20сервіс" target="_blank">WhatsApp</a>
       </div>
     </div>
   </header>
 
-  <!-- HERO -->
   <main id="top" class="container hero">
     <div>
-      <span class="tag">Преміальний автосервіс · Одеса</span>
-      <h1>Твоя машина — частина тебе. <span style="background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent">Ми зможемо домовитись.</span></h1>
-      <p class="lead">Porsche • Mercedes • BMW • Audi. Сервіс “як для себе”: чесно, акуратно, з увагою до деталей. Гнучкі умови для своїх.</p>
-      <div class="badges">
-        <span class="badge">Гарантія на роботи</span>
-        <span class="badge">Оригінальні запчастини</span>
-        <span class="badge">Без черг</span>
-      </div>
+      <h1>Твоя машина — частина тебе. Ми зможемо домовитись.</h1>
+      <p class="lead">Porsche • Mercedes • BMW • Audi. Сервіс для тих, хто не знижує планку. Ми залишились тими самими — чесними, уважними, вимогливими до деталей.</p>
       <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
-        <a class="btn gold" href="https://wa.me/380674837410?text=Запис%20на%20сервіс%20(PROsche)" target="_blank" rel="noopener">Запис у WhatsApp</a>
+        <a class="btn gold" href="https://wa.me/380674837410?text=Запис%20на%20діагностику" target="_blank">Записатись</a>
         <a class="btn ghost" href="#contacts">Контакти</a>
       </div>
     </div>
     <div class="hero-img">
-      <img src="https://drive.google.com/uc?export=view&id=15EAm8Nl352S3JfairAU-AEyJI_I_ukST" alt="Герой-кадр PROsche: преміальна естетика">
+      <img src="https://drive.google.com/uc?export=view&id=15EAm8Nl352S3JfairAU-AEyJI_I_ukST" alt="Головне фото PROsche">
     </div>
   </main>
 
-  <!-- SERVICES with ACCORDION -->
-  <section id="services">
-    <div class="container">
-      <h2>Послуги</h2>
-      <p class="section-lead">Зручно і наочно: категорії розкриваються. Якщо потрібно щось нестандартне — напишіть у WhatsApp.</p>
-
-      <div class="services" style="margin-top:12px">
-        <!-- LEFT: Accordion -->
-        <div class="accordion">
-          <details open>
-            <summary>Діагностика</summary>
-            <div class="acc-body">
-              <ul>
-                <li>Компʼютерна діагностика всіх систем (читання помилок, live-дані)</li>
-                <li>Механічна перевірка вузлів (підвіска, гальма, витоки)</li>
-                <li>Тест-драйв та первинний кошторис</li>
-              </ul>
-              <div style="margin-top:10px">
-                <a class="btn gold" href="https://wa.me/380674837410?text=Потрібна%20діагностика%20авто%20(PROsche)" target="_blank" rel="noopener">Запис</a>
-              </div>
-            </div>
-          </details>
-
-          <details>
-            <summary>Планове ТО</summary>
-            <div class="acc-body">
-              <ul>
-                <li>Моторна олива та фільтр</li>
-                <li>Повітряний, салонний, паливний фільтри</li>
-                <li>Свічки запалювання / накалу</li>
-                <li>Гальмівна рідина (раз на 2 роки)</li>
-                <li>Адаптація / прописка АКБ</li>
-              </ul>
-              <div style="margin-top:10px">
-                <a class="btn gold" href="https://wa.me/380674837410?text=Планове%20ТО%20(PROsche)" target="_blank" rel="noopener">Запис</a>
-              </div>
-            </div>
-          </details>
-
-          <details>
-            <summary>Гальмівна система</summary>
-            <div class="acc-body">
-              <ul>
-                <li>Колодки, диски, очищення та обслуговування супортів</li>
-                <li>Регулювання ручного гальма (мех./ел.)</li>
-                <li>Антискрипові рішення</li>
-              </ul>
-              <div style="margin-top:10px">
-                <a class="btn gold" href="https://wa.me/380674837410?text=Гальмівна%20система%20(PROsche)" target="_blank" rel="noopener">Запис</a>
-              </div>
-            </div>
-          </details>
-
-          <details>
-            <summary>Підвіска та геометрія</summary>
-            <div class="acc-body">
-              <ul>
-                <li>Амортизатори, пружини, опори</li>
-                <li>Важелі, шарові, сайлентблоки</li>
-                <li>Розвал-сходження та балансування</li>
-              </ul>
-              <div style="margin-top:10px">
-                <a class="btn gold" href="https://wa.me/380674837410?text=Підвіска%20та%20геометрія%20(PROsche)" target="_blank" rel="noopener">Запис</a>
-              </div>
-            </div>
-          </details>
-
-          <details>
-            <summary>Двигун і трансмісія</summary>
-            <div class="acc-body">
-              <ul>
-                <li>Капітальний/модульний ремонт двигуна</li>
-                <li>ГРМ/ланцюг, ролики, помпа</li>
-                <li>АКПП/DSG/МКПП: обслуговування, ремонт, адаптація</li>
-              </ul>
-              <div style="margin-top:10px">
-                <a class="btn gold" href="https://wa.me/380674837410?text=Двигун%20та%20трансмісія%20(PROsche)" target="_blank" rel="noopener">Запис</a>
-              </div>
-            </div>
-          </details>
-
-          <details>
-            <summary>Електроніка та кодування</summary>
-            <div class="acc-body">
-              <ul>
-                <li>Діагностика блоків, скидання помилок</li>
-                <li>Прошивка ЕБУ, активації прихованих функцій</li>
-                <li>Сигналізація, GPS-маяки</li>
-              </ul>
-              <div style="margin-top:10px">
-                <a class="btn gold" href="https://wa.me/380674837410?text=Електроніка%20та%20кодування%20(PROsche)" target="_blank" rel="noopener">Запис</a>
-              </div>
-            </div>
-          </details>
+  <section id="services" class="container">
+    <h2>Послуги</h2>
+    <div class="accordion">
+      <details open>
+        <summary>Діагностика</summary>
+        <div class="acc-body">
+          <ul>
+            <li>Компʼютерна та механічна діагностика</li>
+            <li>Перевірка підвіски, гальм, електроніки</li>
+            <li>Тест-драйв, первинний кошторис</li>
+          </ul>
         </div>
-
-        <!-- RIGHT: Visuals for mood (Drive images) -->
-        <div class="service-visual">
-          <img src="https://drive.google.com/uc?export=view&id=1hV6Bp0xoMN5i65Orvn-IWTv_ggVNtYjM" alt="Діагностика — PROsche">
-          <img src="https://drive.google.com/uc?export=view&id=18FaMOrQnouA1BHdSSYAZKifO6doY58te" alt="Гальмівні механізми — PROsche">
-          <img src="https://drive.google.com/uc?export=view&id=10M-w7nz3vZVuvEYJOIHj0965GPas1Lxx" alt="Підвіска — PROsche">
-          <img src="https://drive.google.com/uc?export=view&id=1TWjvViTpob6uoS4kjTEB1113i2-RAW39" alt="Двигун — PROsche">
+      </details>
+      <details>
+        <summary>ТО та витратні матеріали</summary>
+        <div class="acc-body">
+          <ul>
+            <li>Олива, фільтри, свічки, рідини</li>
+            <li>Перевірка акумулятора, адаптація АКБ</li>
+          </ul>
         </div>
-      </div>
+      </details>
+      <details>
+        <summary>Гальмівна система</summary>
+        <div class="acc-body">
+          <ul>
+            <li>Заміна колодок, дисків, обслуговування супортів</li>
+            <li>Антискрипові рішення</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary>Підвіска</summary>
+        <div class="acc-body">
+          <ul>
+            <li>Амортизатори, важелі, сайлентблоки</li>
+            <li>Розвал-сходження та балансування</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary>Двигун та трансмісія</summary>
+        <div class="acc-body">
+          <ul>
+            <li>Ремонт ГРМ, АКПП, DSG, МКПП</li>
+            <li>Помпа, термостат, сальники, герметичність</li>
+          </ul>
+        </div>
+      </details>
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section id="gallery" style="border-top:1px solid var(--line)">
-    <div class="container">
-      <h2>Галерея</h2>
-      <p class="section-lead">Атмосфера та деталі, які кажуть більше за слова.</p>
-      <div class="gallery" style="margin-top:12px">
-        <img src="https://drive.google.com/uc?export=view&id=1mOaLcTqgB_jtEHy_rAVOKEkoVGwSw9em" alt="Майстерня PROsche, Одеса">
-        <img src="https://drive.google.com/uc?export=view&id=11KhJt5nduWgJ0TdnBPbwzXMJJEqO865R" alt="Інтерʼєр преміум авто">
-        <img src="https://drive.google.com/uc?export=view&id=1zIzZ2z4WfpqPJYFXIXGEIc0yW87FMKEK" alt="Колеса та шини">
-        <img src="https://drive.google.com/uc?export=view&id=1gCqQkKCxNccPV7qTUjeLsr5ICdW2dQG-" alt="Робочий момент">
-        <img src="https://drive.google.com/uc?export=view&id=18FaMOrQnouA1BHdSSYAZKifO6doY58te" alt="Гальмівні супорти детально">
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACTS -->
-  <section id="contacts" style="border-top:1px solid var(--line)">
+  <section id="contacts">
     <div class="container grid2">
       <div class="card">
-        <h2 style="margin-bottom:6px">Контакти</h2>
-        <p class="muted" style="margin:8px 0">м. Одеса, вул. Бугаївська 54/1</p>
-        <p class="muted" style="margin:8px 0">Графік: Пн–Пт 10:00–19:00, Сб 10:00–17:00</p>
+        <h2>Контакти</h2>
+        <p class="muted">Одеса, вул. Бугаївська 54/1</p>
+        <p>Пн–Сб 09:00–19:00</p>
         <p><strong>Телефон:</strong> <a href="tel:+380674837410">+38 (067) 483 74 10</a></p>
-        <p><strong>Instagram:</strong> <a href="https://instagram.com/prosche.service" target="_blank" rel="noopener">@prosche.service</a></p>
-        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn gold" href="https://wa.me/380674837410?text=Запис%20на%20сервіс%20(PROsche)" target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn ghost" href="tel:+380674837410">Подзвонити</a>
-        </div>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/prosche.service" target="_blank">@prosche.service</a></p>
       </div>
       <div class="card">
-        <h2 style="margin-bottom:6px">Локація</h2>
         <iframe class="map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.353773468784!2d30.71921947682621!3d46.44024007109525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c631a37fbbf0db%3A0xf30d6d7b4a11a317!2sPROsche%20Service!5e0!3m2!1suk!2sua!4v1730925260954!5m2!1suk!2sua"
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
-        </iframe>
-        <p class="muted" style="margin-top:8px">Парковка поруч. Запис — за попереднім дзвінком або повідомленням.</p>
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p class="muted">Парковка поруч. Запис за дзвінком або повідомленням.</p>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
-      <div>© <span id="year"></span> PROsche · Premium Auto Service Odesa</div>
-      <div class="muted">Instagram: <a href="https://instagram.com/prosche.service" target="_blank" rel="noopener">@prosche.service</a></div>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+      <div>© <span id="year"></span> PROsche. Premium Auto Service Odesa</div>
+      <div>Instagram: <a href="https://instagram.com/prosche.service" target="_blank">@prosche.service</a></div>
     </div>
   </footer>
 
@@ -274,3 +172,4 @@
   </script>
 </body>
 </html>
+
