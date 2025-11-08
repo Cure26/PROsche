@@ -1,66 +1,182 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PROsche - твій автосервіс в Одесі | Porsche, Mercedes, BMW, Audi</title>
-  <meta name="description" content="PROsche — преміальний автосервіс в Одесі: Porsche, Mercedes, BMW, Audi. Глибока діагностика, ТО, ремонт, розвал-сходження. Чесно, точно, акуратно." />
+  <title>PROsche — автосервіс в Одесі | Porsche, Mercedes, BMW, Audi</title>
+  <meta name="description" content="Преміальний автосервіс в Одесі: Porsche, Mercedes, BMW, Audi. Діагностика, ТО, ремонт. Чесно, точно, акуратно." />
   <meta name="theme-color" content="#0a0a0a" />
-  <meta property="og:title" content="PROsche — Преміальний автосервіс в Одесі" />
-  <meta property="og:description" content="Porsche • Mercedes • BMW • Audi. Сервіс для тих, хто цінує якість навіть у непрості часи." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://prosche.com.ua/" />
-
   <style>
-    :root{
-      --bg:#0a0a0a; --text:#f5f5f5; --muted:#a9a9ad;
-      --gold:#c9a86b; --gold2:#b88b3e; --line:rgba(255,255,255,.08);
-      --radius:14px;
+    :root {
+      --bg: #0a0a0a;
+      --text: #f5f5f5;
+      --muted: #a9a9ad;
+      --gold: #c9a86b;
+      --gold2: #b88b3e;
+      --line: rgba(255,255,255,.08);
+      --radius: 14px;
     }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1180px;margin:auto;padding:20px}
-    header{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-    .nav{display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:10px;color:var(--gold);font-weight:800}
-    .brand img{height:40px;width:40px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}
-    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
-    nav a{color:var(--muted);font-weight:600}
-    nav a:hover{color:#fff}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;font-weight:800;border:1px solid var(--line)}
-    .btn.gold{background:linear-gradient(90deg,var(--gold),var(--gold2));color:#111;border:none}
-    .btn.ghost{background:transparent;color:#fff}
-    /* HERO */
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:34px 0;border-bottom:1px solid var(--line)}
-    @media(max-width:900px){.hero{grid-template-columns:1fr}}
-    h1{font-size:44px;line-height:1.1;margin:12px 0 10px}
-    .lead{color:var(--muted);font-size:18px;max-width:680px}
-    .hero-img{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
-    .hero-img img{width:100%;height:100%;object-fit:cover;display:block}
-    /* ACCORDION */
-    section{padding:44px 0}
-    h2{font-size:32px;margin:0 0 8px;color:var(--gold)}
-    .accordion{display:grid;gap:10px}
-    details{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:var(--radius);padding:12px}
-    summary{cursor:pointer;font-weight:700;list-style:none}
-    summary::-webkit-details-marker{display:none}
-    .acc-body{color:#d6d6da;margin-top:6px}
-    .acc-body ul{margin:8px 0 0 18px}
-    .muted{color:var(--muted)}
-    /* CONTACT */
-    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    @media(max-width:900px){.grid2{grid-template-columns:1fr}}
-    .card{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
-    iframe.map{width:100%;height:320px;border:0;border-radius:12px}
-    footer{border-top:1px solid var(--line);padding:16px 0;color:var(--muted);font-size:14px}
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1180px; margin: auto; padding: 20px; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(0,0,0,.55);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold);
+      font-weight: 800;
+    }
+    .brand img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--line);
+    }
+    nav ul {
+      display: flex;
+      gap: 18px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      color: var(--muted);
+      font-weight: 600;
+    }
+    nav a:hover { color: #fff; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-weight: 800;
+      border: 1px solid var(--line);
+    }
+    .btn.gold {
+      background: linear-gradient(90deg, var(--gold), var(--gold2));
+      color: #111;
+      border: none;
+    }
+    .btn.ghost {
+      background: transparent;
+      color: #fff;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 24px;
+      align-items: center;
+      padding: 34px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    @media(max-width:900px) {
+      .hero { grid-template-columns: 1fr; }
+    }
+    h1 {
+      font-size: 44px;
+      line-height: 1.1;
+      margin: 12px 0 10px;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 680px;
+    }
+    .hero-img {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+    .hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    section { padding: 44px 0; }
+    h2 {
+      font-size: 32px;
+      margin: 0 0 8px;
+      color: var(--gold);
+    }
+    .accordion { display: grid; gap: 10px; }
+    details {
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 12px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      list-style: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .acc-body {
+      color: #d6d6da;
+      margin-top: 6px;
+    }
+    .acc-body ul {
+      margin: 8px 0 0 18px;
+    }
+    .muted { color: var(--muted); }
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    @media(max-width:900px) {
+      .grid2 { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: rgba(255,255,255,.02);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    iframe.map {
+      width: 100%;
+      height: 320px;
+      border: 0;
+      border-radius: 12px;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 16px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
   </style>
 </head>
 
 <body>
   <header>
     <div class="container nav">
-      <a class="brand" href="#top"><img src="https://drive.google.com/uc?export=view&id=1m1c8R088TNf7_iYoPxRkrQabIdgf0Ocq" alt="PROsche логотип">PROsche</a>
+      <a class="brand" href="#top">
+        <img src="https://raw.githubusercontent.com/Cure26/PROsche/main/logo.png" alt="PROsche логотип" />
+        PROsche
+      </a>
       <nav>
         <ul>
           <li><a href="#services">Послуги</a></li>
@@ -83,13 +199,14 @@
       </div>
     </div>
     <div class="hero-img">
-      <img src="https://drive.google.com/uc?export=view&id=15EAm8Nl352S3JfairAU-AEyJI_I_ukST" alt="Головне фото PROsche">
+      <img src="https://drive.google.com/uc?export=view&id=15EAm8Nl352S3JfairAU-AEyJI_I_ukST" alt="Головне фото PROsche" />
     </div>
   </main>
 
   <section id="services" class="container">
     <h2>Послуги</h2>
     <div class="accordion">
+      <details>
         <summary>Діагностика</summary>
         <div class="acc-body">
           <ul>
@@ -99,42 +216,7 @@
           </ul>
         </div>
       </details>
-      <details>
-        <summary>ТО та витратні матеріали</summary>
-        <div class="acc-body">
-          <ul>
-            <li>Олива, фільтри, свічки, рідини</li>
-            <li>Перевірка акумулятора, адаптація АКБ</li>
-          </ul>
-        </div>
-      </details>
-      <details>
-        <summary>Гальмівна система</summary>
-        <div class="acc-body">
-          <ul>
-            <li>Заміна колодок, дисків, обслуговування супортів</li>
-            <li>Антискрипові рішення</li>
-          </ul>
-        </div>
-      </details>
-      <details>
-        <summary>Підвіска</summary>
-        <div class="acc-body">
-          <ul>
-            <li>Амортизатори, важелі, сайлентблоки</li>
-            <li>Розвал-сходження та балансування</li>
-          </ul>
-        </div>
-      </details>
-      <details>
-        <summary>Двигун та трансмісія</summary>
-        <div class="acc-body">
-          <ul>
-            <li>Ремонт ГРМ, АКПП, DSG, МКПП</li>
-            <li>Помпа, термостат, сальники, герметичність</li>
-          </ul>
-        </div>
-      </details>
+      <!-- Додай інші блоки послуг тут -->
     </div>
   </section>
 
@@ -145,107 +227,4 @@
         <p class="muted">Одеса, вул. Бугаївська 54/1</p>
         <p>Пн–Сб 09:00–19:00</p>
         <p><strong>Телефон:</strong> <a href="tel:+380674837410">+38 (067) 483 74 10</a></p>
-        <p><strong>Instagram:</strong> <a href="https://instagram.com/prosche.service" target="_blank">@prosche.service</a></p>
-      </div>
-      <div class="card">
-        <iframe class="map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.353773468784!2d30.71921947682621!3d46.44024007109525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c631a37fbbf0db%3A0xf30d6d7b4a11a317!2sPROsche%20Service!5e0!3m2!1suk!2sua!4v1730925260954!5m2!1suk!2sua"
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <p class="muted">Парковка поруч. Запис за дзвінком або повідомленням.</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
-      <div>© <span id="year"></span> PROsche. Premium Auto Service Odesa</div>
-      <div>Instagram: <a href="https://instagram.com/prosche.service" target="_blank">@prosche.service</a></div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html> <!DOCTYPE html>
-<html lang="uk">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PROsche SEO Requests</title>
-<style>
-  body {
-    background: #0b0f1a;
-    color: white;
-    font-family: "Inter", sans-serif;
-    text-align: center;
-    padding: 60px 20px;
-  }
-
-  h1 {
-    font-size: 52px;
-    font-weight: 900;
-    background: linear-gradient(90deg, #f43f5e, #60a5fa, #fbbf24);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 30px;
-    animation: shine 6s linear infinite;
-  }
-
-  @keyframes shine {
-    from { background-position: 0%; }
-    to { background-position: 200%; }
-  }
-
-  .requests {
-    font-size: 18px;
-    line-height: 1.8;
-    max-width: 900px;
-    margin: auto;
-    color: rgba(255,255,255,0.2); /* transparent text effect */
-    background: linear-gradient(90deg, rgba(255,255,255,0.7), rgba(255,255,255,0));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-align: left;
-  }
-
-  .requests span {
-    display: block;
-  }
-</style>
-</head>
-<body>
-
-<h1>Найпопулярніші запити клієнтів Одеси</h1>
-
-<div class="requests">
-  <span>1. автосервіс Одеса преміум</span>
-  <span>2. ремонт Porsche Одеса</span>
-  <span>3. діагностика BMW Одеса</span>
-  <span>4. ТО Mercedes Одеса</span>
-  <span>5. сервіс Audi Одеса</span>
-  <span>6. перевірка підвіски BMW Одеса</span>
-  <span>7. ремонт коробки передач Mercedes</span>
-  <span>8. заміна масла Porsche Одеса</span>
-  <span>9. перевірка авто перед покупкою Одеса</span>
-  <span>10. шиномонтаж преміум Одеса</span>
-  <span>11. автосервіс для преміум авто Одеса</span>
-  <span>12. адаптація АКБ BMW Одеса</span>
-  <span>13. сервіс Porsche і Mercedes Одеса</span>
-  <span>14. гальмівна система ремонт Одеса</span>
-  <span>15. двигун Audi ремонт Одеса</span>
-  <span>16. діагностика Mercedes Одеса</span>
-  <span>17. PROsche Service Одеса</span>
-  <span>18. Porsche Cayenne сервіс Одеса</span>
-  <span>19. BMW X5 обслуговування Одеса</span>
-  <span>20. Mercedes GLE сервіс Одеса</span>
-</div>
-
-</body>
-</html>
-
-
+        <p><strong>Instagram:</
